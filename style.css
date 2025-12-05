@@ -1,7 +1,7 @@
 /* ====== Variables de color y tamaños ====== */
 :root {
   /* Colores */
-  --color-ppal: rgb(84,70,0);           /* granate */
+  --color-ppal: rgb(84,0,0);           /* granate */
   --color-sec: #000000;                /* negro */
   --color-fondo: rgb(60,91,67);        /* verde de fondo */
   --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente */

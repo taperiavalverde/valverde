@@ -1,0 +1,243 @@
+/* ====== Variables de color y tamaños ====== */
+:root {
+  /* Colores */
+  --color-ppal: rgb(84,0,0);           /* granate */
+  --color-sec: #000000;                /* negro */
+  --color-fondo: rgb(60,91,67);        /* verde de fondo */
+  --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente */
+  --color-blanco: #FFFFFF;
+
+  /* Tamaños de letra */
+  --letras-platos: 1.3rem;     /* tamaño de los nombres de los platos */
+  --letras-expl: 1rem;         /* tamaño de la explicación */
+  --letras-precio: 1rem;       /* tamaño del precio */
+  --letras-grupoMenu: 2.5rem;  /* tamaño de los títulos de los grupos de platos */
+
+  /* Separación entre grupos de platos */
+  --separacion-grupo: 2rem;
+}
+
+/* ====== Reset y básicos ====== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cardo', serif;
+  color: var(--color-sec);
+  background-color: var(--color-fondo);
+}
+
+/* ====== Títulos grandes ====== */
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.titulo-v {
+  font-size: clamp(80px, 15vw, 240px);
+  line-height: 1;
+}
+
+.titulo-resto {
+  font-size: clamp(53px, 10vw, 160px);
+  line-height: 1;
+  display: inline-block;
+}
+
+/* ====== Pantalla Hero ====== */
+.pantallaPpal {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-ppal);
+  position: relative;
+}
+
+.rectangulo {
+  background-color: rgba(30,71,66,0); /* transparente */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Botón principal */
+.boton-menu {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: transparent; /* rgba(0, 0, 0, 0.25); /* semitransparente */
+  color: var(--color-ppal);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 1rem;
+}
+
+/* ====== Pantalla abajo ====== */
+.pantalla1abajo {
+  padding: 3rem 1rem;
+  background-color: var(--color-blanco);
+  text-align: center;
+  color: var(--color-sec);
+}
+
+.pantalla1abajo h2 {
+  color: var(--color-sec);
+  margin-top: 2rem;
+}
+
+.pantalla1abajo .link {
+  color: var(--color-sec);
+  text-decoration: none;
+}
+
+.pantalla1abajo .link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Encabezado / Logo ====== */
+.tituloarriba {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem 0;
+  background-color: var(--color-fondo);
+  border-bottom: 2px solid var(--color-ppal);
+}
+
+.tituloarriba .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-ppal);
+}
+
+.tituloarriba .logo:hover {
+  text-decoration: underline;
+}
+
+/* ====== Barra de navegación ====== */
+.barraNav {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-fondo);
+  z-index: 100;
+  border-bottom: 2px solid var(--color-ppal);
+}
+
+.barraNav a {
+  text-decoration: none;
+  color: var(--color-ppal);
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.barraNav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Grupos de platos ====== */
+.gruposPlatos {
+  background-color: var(--color-fondo);
+  color: var(--color-sec);
+  padding: 2rem 1rem;
+  margin-bottom: var(--separacion-grupo);
+  border-radius: 8px;
+  text-align: center;
+  scroll-margin-top: calc(1rem + 2px); /* evita que la barra sticky tape la sección */
+}
+
+.gruposPlatosMenu {
+  color: var(--color-sec);
+  font-size: var(--letras-grupoMenu);
+  margin-bottom: 1rem;
+}
+
+/* ====== Platos ====== */
+.platosNombre {
+  font-size: var(--letras-platos);
+  color: var(--color-ppal);
+  display: block;
+}
+
+.platosExplic {
+  font-size: var(--letras-expl);
+  color: var(--color-sec);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.platosPrecio {
+  font-size: var(--letras-precio);
+  color: var(--color-ppal);
+  display: block;
+  margin-bottom: var(--separacion-grupo);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+
+  html {
+    scroll-padding-top: 100px; /* Ajusta este valor a la altura de tu barra sticky en móvil */
+  }
+
+  /* Títulos grandes */
+  .titulo-v {
+    font-size: clamp(60px, 20vw, 240px);
+  }
+
+  .titulo-resto {
+    font-size: clamp(40px, 15vw, 160px);
+  }
+
+  /* Botón principal */
+  .boton-menu {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rectangulo {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color:var(--color-fondo) ;
+  }
+
+  .pantalla1abajo {
+    padding: 2rem 1rem;
+  }
+
+  /* Platos centrados en móvil */
+  .platosNombre,
+  .platosExplic,
+  .platosPrecio {
+    text-align: center;
+    word-break: break-word;
+  }
+
+  /* Barra de navegación en móvil: saltos de línea */
+  .barraNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .barraNav a {
+    margin: 0;
+  }
+}

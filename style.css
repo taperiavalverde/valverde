@@ -71,7 +71,7 @@ body {
   padding: 2rem;
   border-radius: 20px;
   max-width: 90vw;
-  box-shadow: 0 10px 20px var(--color-sombra); /* cambio de sombra a granate */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 /* ====== BOTÓN ====== */
@@ -85,14 +85,14 @@ body {
   font-weight: bold;
   text-decoration: none;
   border-radius: 12px;
-  box-shadow: 0 6px 12px var(--color-sombra); /* sombra unificada */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   transition: transform 0.2s, box-shadow 0.2s;
   text-shadow: 1px 1px 4px var(--color-sombra);
 }
 
 .boton-menu:hover {
   transform: scale(1.06);
-  box-shadow: 0 8px 18px var(--color-sombra); /* también en hover */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
 
 /* ====== BLOQUE INFERIOR ====== */
@@ -103,7 +103,7 @@ body {
   background-color: var(--color-fondo-semi);
   color: var(--color-ppal);
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* mantengo negra sutil */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   text-align: center;
 }
 

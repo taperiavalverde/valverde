@@ -139,7 +139,7 @@ body {
   /* Rectángulo oculto en móvil */
   .rectangulo {
     display: block;
-    box-shadow: 0 10px 20px rgba(128,0,32,0.5); /* sombra granate */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* sombra granate */
   }
 
   /* Pantalla principal más centrada */

@@ -148,7 +148,8 @@ body {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
-   .infoTitulo {
+  .infoTitulo {
+    text-shadow: 2px 2px 6px #000000; /* sombra negra solo aquí */
     font-size: clamp(1.8rem, 6vw, var(--letras-grupos));
   }
 }

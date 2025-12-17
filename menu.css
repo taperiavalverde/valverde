@@ -8,7 +8,6 @@
   --color-sombra: #8B0000;
   --color-sombra-cajas: rgba(0,0,0,0.2);
 
-  --letras-grupoMenu: 2.5rem;
   --letras-platos: 1.3rem;
   --letras-expl: 1rem;
   --letras-precio: 1rem;
@@ -70,7 +69,7 @@
 .gruposPlatosMenu {
   text-align: center;
   color: var(--color-sec);
-  font-size: var(--letras-grupoMenu);
+  font-size: var(--letras-grupos);
   margin-bottom: 2rem;
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
@@ -123,6 +122,6 @@
   }
 
   .gruposPlatosMenu {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupoMenu));
+    font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
   }
 }

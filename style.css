@@ -125,18 +125,32 @@ body {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+  /* Título principal más pequeño */
   .titulo-v { font-size: clamp(60px, 20vw, 200px); }
   .titulo-resto { font-size: clamp(40px, 15vw, 140px); }
 
+  /* Botón más pequeño */
   .boton-menu {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
+    box-shadow: 0 6px 12px rgba(128,0,32,0.5); /* sombra granate */
   }
 
+  /* Rectángulo oculto en móvil */
   .rectangulo {
-    padding: 1.5rem;
+    display: none;
+    box-shadow: 0 10px 20px rgba(128,0,32,0.5); /* sombra granate */
+  }
+
+  /* Pantalla principal más centrada */
+  .pantallaPpal {
+    align-items: center; /* centrado vertical */
+    justify-content: center; /* centrado horizontal */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
+
 
 /* ====== UTILIDAD PARA SEO / ACCESIBILIDAD ====== */
 .sr-only {

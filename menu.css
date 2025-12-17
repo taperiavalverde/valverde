@@ -96,7 +96,7 @@
 @media (max-width: 768px) {
 
    html {
-    scroll-padding-top: 100px; /* Ajusta este valor a la altura de tu barra sticky en móvil */
+    scroll-padding-top: 150px; /* Ajusta este valor a la altura de tu barra sticky en móvil */
   }
   .barraNav {
     display: flex;

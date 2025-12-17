@@ -149,6 +149,6 @@ body {
     padding: 0.8rem 1.5rem;
   }
    .infoTitulo {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
+    font-size: clamp(1.8rem, 6vw, var(--letras-grupos));
   }
 }

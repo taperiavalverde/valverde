@@ -10,7 +10,7 @@
 
   /* Color sombra */
   --color-sombra: #8B0000;             /* granate/rojo */
-  --color-sombra-cajas: var(--color-sombra); /* sombra para rectángulo, botón y bloque inferior */
+  --color-sombra-cajas: rgba(0,0,0,0.2); /* sombra para rectángulo, botón y bloque inferior */
 
   /* Tipografías */
   --letras-platos: 1.3rem;

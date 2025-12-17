@@ -1,0 +1,110 @@
+/* ====== ESTILOS GENERALES DEL MENÚ ====== */
+
+.estilosMenu {
+  background-color: var(--color-fondo);
+  color: var(--color-sec);
+}
+
+/* ====== LOGO SUPERIOR ====== */
+.tituloarriba {
+  text-align: center;
+  padding: 1.5rem 0 0.75rem;
+  background-color: var(--color-fondo);
+  border-bottom: 2px solid var(--color-terciario);
+}
+
+.logo {
+  text-decoration: none;
+  display: inline-flex;
+  text-shadow: 2px 2px 6px var(--color-sombra);
+}
+
+/* ====== BARRA DE NAVEGACIÓN ====== */
+.barraNav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-fondo);
+  padding: 0.75rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.barraNav a {
+  color: var(--color-sec);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1rem;
+  text-shadow: 1px 1px 3px var(--color-sombra);
+}
+
+.barraNav a:hover {
+  color: var(--color-terciario);
+}
+
+/* ====== CONTENEDOR DE GRUPOS ====== */
+.gruposPlatos {
+  background-color: var(--color-fondo-semi);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 900px;
+}
+
+.gruposPlatosMenu {
+  text-align: center;
+  color: var(--color-sec);
+  font-size: var(--letras-grupoMenu);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 6px var(--color-sombra);
+}
+
+/* ====== PLATOS ====== */
+.plato {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.platosNombre {
+  display: block;
+  font-size: var(--letras-platos);
+  font-weight: bold;
+  color: var(--color-sec);
+  text-shadow: 1px 1px 4px var(--color-sombra);
+}
+
+.platosExplic {
+  display: block;
+  font-size: var(--letras-expl);
+  opacity: 0.85;
+  margin: 0.25rem 0 0.5rem;
+  text-shadow: 1px 1px 3px var(--color-sombra);
+}
+
+.platosPrecio {
+  display: block;
+  font-size: var(--letras-precio);
+  color: var(--color-terciario);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px var(--color-sombra);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .barraNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .gruposPlatos {
+    padding: 1.5rem 1rem;
+  }
+
+  .gruposPlatosMenu {
+    font-size: clamp(1.6rem, 6vw, var(--letras-grupoMenu));
+  }
+}

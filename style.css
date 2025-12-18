@@ -150,5 +150,6 @@ body {
   }
    .infoTitulo {
     font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
+    text-shadow: 2px 2px 6px var(--color-sombra-cajas);
   }
 }

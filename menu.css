@@ -108,7 +108,7 @@
 
 /* ====== SCROLL GLOBAL PARA STICKY NAV ====== */
 html {
-  scroll-padding-top: 120px; /* Altura de la barra sticky */
+  scroll-padding-top: 70px; /* Altura de la barra sticky */
 }
 
 /* ====== RESPONSIVE ====== */

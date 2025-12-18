@@ -5,9 +5,10 @@
   --color-sec: #e6e6e6;
   --color-terciario: #aa8b2b;
   --color-fondo-semi: rgba(255,255,255,0.16);
-  --color-sombra: #8B0000;
+  --color-sombra: #000000; /* sombra negra para títulos */
   --color-sombra-cajas: rgba(0,0,0,0.2);
 
+  --letras-grupoMenu: 2.5rem;
   --letras-platos: 1.3rem;
   --letras-expl: 1rem;
   --letras-precio: 1rem;
@@ -42,7 +43,7 @@
   background-color: var(--color-fondo);
   padding: 0.75rem 0;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 2px solid var(--color-terciario);
 }
 
 .barraNav a {
@@ -69,7 +70,7 @@
 .gruposPlatosMenu {
   text-align: center;
   color: var(--color-sec);
-  font-size: var(--letras-grupos);
+  font-size: var(--letras-grupoMenu);
   margin-bottom: 2rem;
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
@@ -105,12 +106,13 @@
   text-shadow: 1px 1px 3px var(--color-sombra);
 }
 
+/* ====== SCROLL GLOBAL PARA STICKY NAV ====== */
+html {
+  scroll-padding-top: 70px; /* Altura de la barra sticky */
+}
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  html {
-    scroll-padding-top: 150px; /* Ajusta a la barra sticky */
-  }
-
   .barraNav {
     display: flex;
     flex-direction: column;
@@ -122,6 +124,10 @@
   }
 
   .gruposPlatosMenu {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
+    font-size: clamp(1.6rem, 6vw, var(--letras-grupoMenu));
+  }
+
+  html {
+    scroll-padding-top: 150px; /* Ajuste para barra más alta en móvil */
   }
 }

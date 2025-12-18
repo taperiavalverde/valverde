@@ -89,7 +89,7 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 12px;
-  box-shadow: 0 6px 12px var(--color-sombra-cajas);
+  box-shadow: 0 6px 12px var(--color-sombra-cajas), 0 0 0 1px var(--color-ppal);
   text-shadow: 1px 1px 4px var(--color-sombra);
   transition: transform 0.2s, box-shadow 0.2s;
 }

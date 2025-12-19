@@ -3,7 +3,7 @@
   --color-fondo: #264d2a;
   --color-ppal: #ffffff;
   --color-sec: #e6e6e6;
-  --color-terciario: #aa8b2b;
+  --color-terciario: #000000;
   --color-fondo-semi: rgba(255,255,255,0.16);
   --color-sombra: #000000; /* sombra negra para títulos */
   --color-sombra-cajas: rgba(0,0,0,0.2);
@@ -12,10 +12,6 @@
   --letras-platos: 1.3rem;
   --letras-expl: 1rem;
   --letras-precio: 1rem;
-}
-
-html{
-  scroll-behavior: smooth;
 }
 
 /* ====== ESTILOS GENERALES ====== */
@@ -107,7 +103,7 @@ html{
   font-size: var(--letras-precio);
   color: var(--color-terciario);
   font-weight: bold;
-  text-shadow: 1px 1px 3px var(--color-sombra);
+  /*text-shadow: 1px 1px 3px var(--color-sombra);*/
 }
 
 /* ====== SCROLL GLOBAL PARA STICKY NAV ====== */

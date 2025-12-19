@@ -58,6 +58,17 @@ body {
   border: 3px solid var(--color-ppal); /* Borde blanco principal */
 }
 
+.logo-svg {
+  width: auto;
+  height: clamp(80px, 15vw, 240px); /* igual que .titulo-v */
+}
+
+.logo-svg text {
+  font-family: 'Cardo', serif;
+  fill: var(--color-ppal);
+  text-shadow: 2px 2px 6px var(--color-sombra);
+}
+
 .titulo {
   display: flex;
   justify-content: center;

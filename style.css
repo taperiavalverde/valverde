@@ -1,19 +1,29 @@
 /* ====== VARIABLES ====== */
 :root {
-  /* Colores */
+  /* Colores 
+  
+ LO ÚNICO QUE PODÉIS TOCAR DE AQUÍ SIN MI MIRADA ACUSATORA SON LOS COLORES:
+
+ simplemente 
+ color: #codigo;
+ o
+ color: rgba(red,green,blue);
+ y se cambia el valor del color al color ese
+ 
+  */
   --color-fondo: #264d2a;
   --color-ppal: #ffffff;
   --color-sec: #e6e6e6;
   --color-terciario: #aa8b2b;
-  --color-fondo-semi: rgba(255,255,255,0.16);
+  --color-fondo-semi: rgba(255, 255, 255, 0.16);
 
   /* Sombras */
   --color-sombra: #000000;
-  --color-sombra-cajas: rgba(0,0,0,0.2);
+  --color-sombra-cajas: rgba(0, 0, 0, 0.2);
 
   /* Tipografías */
   --letras-grupos: 2.5rem; /* títulos info y menú */
-  --letras-textos: 1rem;   /* texto normal */
+  --letras-textos: 1rem; /* texto normal */
 }
 
 /* ====== RESET ====== */
@@ -24,7 +34,7 @@
 }
 
 body {
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   color: var(--color-ppal);
   background-color: var(--color-fondo);
 }
@@ -37,7 +47,7 @@ body {
   padding: 0 !important;
   margin: -1px !important;
   overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
+  clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
 }
@@ -64,7 +74,7 @@ body {
 }
 
 .logo-svg text {
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   fill: var(--color-ppal);
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
@@ -157,7 +167,6 @@ body {
   stroke: var(--color-terciario); /* Cambia el color de las líneas */
 }
 
-
 .eliicoptero {
   fill: none;
   position: fixed;
@@ -167,14 +176,13 @@ body {
   height: auto;
   z-index: 1000;
   pointer-events: none;
-  opacity: 0;           /* oculto por defecto */
+  opacity: 0; /* oculto por defecto */
   transition: opacity 0.5s ease;
 }
 
 .eliicoptero.visible {
-  opacity: 1;           /* visible al llegar al final */
+  opacity: 1; /* visible al llegar al final */
 }
-
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
@@ -182,7 +190,7 @@ body {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
-   .infoTitulo {
+  .infoTitulo {
     font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
   }
 }

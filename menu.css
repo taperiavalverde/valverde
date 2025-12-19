@@ -1,13 +1,5 @@
 /* ====== VARIABLES ====== */
 :root {
-  --color-fondo: #264d2a;
-  --color-ppal: #ffffff;
-  --color-sec: #e6e6e6;
-  --color-terciario: #000000;
-  --color-fondo-semi: rgba(255,255,255,0.16);
-  --color-sombra: #000000; /* sombra negra para títulos */
-  --color-sombra-cajas: rgba(0,0,0,0.2);
-
   --letras-grupoMenu: 2.5rem;
   --letras-platos: 1.3rem;
   --letras-expl: 1rem;
@@ -18,7 +10,7 @@
 .estilosMenu {
   background-color: var(--color-fondo);
   color: var(--color-sec);
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
 }
 
 /* ====== LOGO ====== */

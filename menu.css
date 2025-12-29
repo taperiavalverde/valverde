@@ -4,26 +4,66 @@
   --letras-platos: 1.3rem;
   --letras-expl: 1rem;
   --letras-precio: 1rem;
+
+  --hero-altura-movil: 100vh;
 }
 
-/* ====== ESTILOS GENERALES ====== */
-.estilosMenu {
-  background-color: var(--color-fondo);
-  color: var(--color-sec);
+html {
+  scroll-behavior: smooth;
+}
+
+/* ====== BODY ====== */
+body.estilosMenu {
+  margin: 0;
   font-family: "Cardo", serif;
+  color: var(--color-sec);
+  background-color: var(--color-fondo); /* color que se ve al scrollear */
+  position: relative;
+}
+
+/* ====== FONDO HERO (solo visual) ====== */
+.heroFondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* altura inicial visible */
+  background-image: url("imagenes/fondo_menu_01.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.heroFondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--degradado);
+}
+
+/* ====== CONTENIDO ENCIMA DEL FONDO ====== */
+.menuHero {
+  position: relative;
+  z-index: 2; /* encima del fondo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
 /* ====== LOGO ====== */
 .tituloarriba {
   text-align: center;
-  padding: 1.5rem 0 0.75rem;
-  background-color: var(--color-fondo);
-  border-bottom: 2px solid var(--color-terciario);
+  padding: 1.5rem 0 0.5rem;
+  position: relative;
+  z-index: 3;
 }
 
 .logo {
+  font-size: 2.5rem;
+  color: var(--color-ppal);
   text-decoration: none;
-  display: inline-flex;
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
 
@@ -32,9 +72,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--color-fondo);
+  background: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.5) 30%, rgba(var(--color-fondo-rgb), 1) 100%);
   padding: 0.75rem 0;
   text-align: center;
+  border-top: 2px solid var(--color-terciario);
   border-bottom: 2px solid var(--color-terciario);
 }
 
@@ -57,6 +98,8 @@
   padding: 2rem;
   border-radius: 16px;
   max-width: 900px;
+  position: relative;
+  z-index: 2;
 }
 
 .gruposPlatosMenu {
@@ -95,20 +138,39 @@
   font-size: var(--letras-precio);
   color: var(--color-terciario);
   font-weight: bold;
-  /*text-shadow: 1px 1px 3px var(--color-sombra);*/
 }
 
-/* ====== SCROLL GLOBAL PARA STICKY NAV ====== */
+.page-end {
+  height: 30vh;
+}
+
+/* ====== SCROLL GLOBAL ====== */
 html {
-  scroll-padding-top: 70px; /* Altura de la barra sticky */
+  scroll-padding-top: 120px; /* espacio para barra sticky */
 }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+  .heroFondo {
+    height: var(--hero-altura-movil);
+    background-image: url("imagenes/fondo_ppal_02.png");
+    background-size: cover;
+    background-position: 47% center; /* mueve a la derecha */
+  }
+
+  .heroFondo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--degradado);
+    pointer-events: none;
+  }
+
   .barraNav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    background: var(--degradado);
   }
 
   .gruposPlatos {
@@ -119,7 +181,12 @@ html {
     font-size: clamp(1.6rem, 6vw, var(--letras-grupoMenu));
   }
 
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  /* Aquí para cambiar la altura a la que "salta" la barra nav */
   html {
-    scroll-padding-top: 200px; /* Ajuste para barra más alta en móvil */
+    scroll-padding-top: 180px;
   }
 }

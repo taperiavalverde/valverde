@@ -1,233 +1,184 @@
-/* ====== VARIABLES ====== */
-:root {
-  /* Colores */
-  --color-fondo: #264d2a;
-  --color-fondo-rgb: 38, 77, 42; /* rojo, verde, azul */
-  --color-ppal: #ffffff;
-  --color-sec: #e6e6e6;
-  --color-terciario: #000000;
-  --color-fondo-semi: rgba(255, 255, 255, 0.16);
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Valverde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
 
-  /* Sombras */
-  --color-sombra: #000000;
-  --color-sombra-cajas: rgba(0, 0, 0, 0.2);
+  <body class="estilosMenu">
+    <div class="heroFondo"></div>
 
-  /* Tipografías */
-  --letras-grupos: 2.5rem; /* títulos info y menú */
-  --letras-textos: 1rem; /* texto normal */
+    <header class="tituloarriba">
+      <a href="index.html" class="logo">
+        <svg class="logo-svg" viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" aria-label="Valverde">
+          <text x="0" y="0" dominant-baseline="text-before-edge" font-size="240">V</text>
+          <text x="170" y="23" dominant-baseline="text-before-edge" font-size="160">ALVERDE</text>
+        </svg>
+      </a>
+      <h1 class="sr-only">Menú de la tapería Valverde</h1>
+      <h2 class="sr-only">Para empezar / Tapas ligeras, Mar & Tierra, Especialidad de la casa, Snacks y Salsas multiuso</h2>
+    </header>
 
-  --hero-altura-movil: 100vh;
+    <nav class="barraNav" aria-label="Navegación del menú">
+      <a href="#primero">Tapas ligeras</a>
+      <a href="#segundo">Mar & Tierra</a>
+      <a href="#tercero">Especialidad de la casa</a>
+      <a href="#cuarto">Snacks</a>
+      <a href="#ultimo">Salsas</a>
+    </nav>
 
-  --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.25) 45%, rgba(var(--color-fondo-rgb), 0.85) 80%, var(--color-fondo) 100%);
-}
+    <!-- PARA EMPEZAR / TAPAS LIGERAS -->
+    <section id="primero" class="gruposPlatos" aria-label="Para empezar">
+      <h2 class="gruposPlatosMenu">Para empezar</h2>
 
-/* ====== RESET ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      <div class="plato">
+        <span class="platosNombre">Patatas bravas y alioli</span>
+        <span class="platosExplic">Crujientes y caseras, salsa brava y alioli sin gluten.</span>
+        <span class="platosPrecio">• Ración 5,00 €</span>
+      </div>
 
-body {
-  font-family: "Cardo", serif;
-  color: var(--color-ppal);
-  background-color: var(--color-fondo);
-}
+      <div class="plato">
+        <span class="platosNombre">Verduras de temporada a la plancha</span>
+        <span class="platosExplic">Servidas con aceite de oliva y opción de salsa chimichurri o ajo.</span>
+        <span class="platosPrecio">• Tapa 3,50 €</span>
+      </div>
 
-/* ====== SEO INVISIBLE ====== */
-.sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
+      <div class="plato">
+        <span class="platosNombre">Pimientos de Padrón</span>
+        <span class="platosExplic">Fritos con aceite de oliva y sal gruesa.</span>
+        <span class="platosPrecio">• Tapa 3,00 €</span>
+      </div>
+    </section>
 
-/* ====== HERO ====== */
-.pantallaPpal {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    <!-- MAR & TIERRA -->
+    <section id="segundo" class="gruposPlatos" aria-label="Mar & Tierra">
+      <h2 class="gruposPlatosMenu">Mar & Tierra</h2>
 
-  background-image: url("imagenes/fondo_ppal_02.png");
-  background-size: cover;
-  background-position: center;
-}
+      <div class="plato">
+        <span class="platosNombre">Zamburiñas con velo Ibérico</span>
+        <span class="platosExplic">Jugosas y apetitosas.</span>
+        <span class="platosPrecio">• Tapa 9,00 € / • Ración 18,00 €</span>
+      </div>
 
-.pantallaPpal::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--degradado);
-  pointer-events: none;
-}
+      <div class="plato">
+        <span class="platosNombre">Pulpo sobre parmentier de patata</span>
+        <span class="platosExplic">Suaves, melosos, con un puré aromático.</span>
+        <span class="platosPrecio">• Tapa 5,00 €</span>
+      </div>
 
-.rectangulo {
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px var(--color-sombra-cajas);
-  border: 3px solid var(--color-ppal); /* Borde blanco principal */
-}
+      <div class="plato">
+        <span class="platosNombre">Mini rollitos de pulpo y queso Arzúa</span>
+        <span class="platosExplic">Crujientes y jugosos.</span>
+        <span class="platosPrecio">• Tapa 4,50 €</span>
+      </div>
 
-.titulo {
-  display: flex;
-  justify-content: center;
-  white-space: nowrap;
-}
+      <div class="plato">
+        <span class="platosNombre">Raxo con patatas</span>
+        <span class="platosExplic">Tradición gallega reinterpretada.</span>
+        <span class="platosPrecio">• Tapa 4,00 €</span>
+      </div>
 
-.titulo-v,
-.titulo-resto {
-  color: var(--color-ppal);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-  line-height: 1;
-}
+      <div class="plato">
+        <span class="platosNombre">Risotto de champiñón portobello, jamón y parmesano</span>
+        <span class="platosExplic">Meloso, sabroso y cremoso.</span>
+        <span class="platosPrecio">• Tapa 4,50 € / • Ración 7,00 €</span>
+      </div>
 
-.titulo-v {
-  font-size: clamp(80px, 15vw, 240px);
-}
+      <div class="plato">
+        <span class="platosNombre">Huevos rotos con jamón</span>
+        <span class="platosExplic">Huevo de corral, patata y jamón serrano.</span>
+        <span class="platosPrecio">• Ración 6,00 €</span>
+      </div>
+    </section>
 
-.titulo-resto {
-  font-size: clamp(53px, 10vw, 160px);
-}
+    <!-- ESPECIALIDAD DE LA CASA -->
+    <section id="tercero" class="gruposPlatos" aria-label="Especialidad de la casa">
+      <h2 class="gruposPlatosMenu">Arepas deconstruídas</h2>
 
-.logo-svg {
-  width: auto;
-  height: clamp(80px, 15vw, 240px); /* igual que .titulo-v */
-}
+      <div class="plato">
+        <span class="platosNombre">Reina Pepiada</span>
+        <span class="platosExplic">Pollo desmechado, aguacate y mayonesa casera.</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
+      </div>
 
-.logo-svg text {
-  font-family: "Cardo", serif;
-  fill: var(--color-ppal);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-}
+      <div class="plato">
+        <span class="platosNombre">La Catira</span>
+        <span class="platosExplic">Pollo desmechado y queso fundido.</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
+      </div>
 
-/* ====== BOTÓN ====== */
-.boton-menu {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 2.5rem;
-  color: var(--color-ppal);
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: bold;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px var(--color-sombra-cajas), 0 0 0 1px var(--color-ppal);
-  text-shadow: 1px 1px 4px var(--color-sombra);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+      <div class="plato">
+        <span class="platosNombre">La Pelúa</span>
+        <span class="platosExplic">Carne mechada y queso fundido.</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
+      </div>
+    </section>
 
-.boton-menu:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 18px var(--color-sombra-cajas);
-}
+    <!-- SNACKS Y TAPAS DIVERTIDAS -->
+    <section id="cuarto" class="gruposPlatos" aria-label="Snacks y tapas divertidas">
+      <h2 class="gruposPlatosMenu">Snacks y tapas divertidas</h2>
 
-/* ====== BLOQUE INFO ====== */
-.pantalla1abajo {
-  margin: 2rem auto;
-  padding: 3rem 2rem;
-  max-width: 90vw;
-  background-color: var(--color-fondo-semi);
-  border-radius: 20px;
-  box-shadow: 0 8px 16px var(--color-sombra-cajas);
-  text-align: center;
-}
+      <div class="plato">
+        <span class="platosNombre">Totopos de maíz con queso y pico de gallo</span>
+        <span class="platosExplic">Crujientes y frescos, para compartir.</span>
+        <span class="platosPrecio">• Tapa 3,50 € / • Ración 5,50 €</span>
+      </div>
 
-.infoBloque {
-  margin-bottom: 2rem;
-}
+      <div class="plato">
+        <span class="platosNombre">Tabla de quesos</span>
+        <span class="platosExplic">Selección de 3–4 quesos, mermelada de pimientos con queso crema y tostas sin gluten.</span>
+        <span class="platosPrecio">• Ración 8,00 €</span>
+      </div>
+    </section>
 
-.infoTitulo {
-  display: block;
-  font-size: var(--letras-grupos); /* igual que menú */
-  font-weight: bold;
-  color: var(--color-sec);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-  margin-bottom: 0.5rem;
-}
+    <!-- SALSA MULTIUSO / PARA ACOMPAÑAR -->
+    <section id="ultimo" class="gruposPlatos" aria-label="Salsas multiuso">
+      <h2 class="gruposPlatosMenu">Salsas para acompañar</h2>
 
-.infoTexto {
-  display: block;
-  font-size: var(--letras-textos);
-  color: var(--color-ppal);
-  text-shadow: 1px 1px 3px var(--color-sombra);
-  line-height: 1.4;
-}
+      <div class="plato">
+        <span class="platosExplic">Alioli / ajo</span>
+        <span class="platosExplic">Guasacaca (aguacate)</span>
+        <span class="platosExplic">Chimichurri</span>
+        <span class="platosExplic">Bacon crujiente</span>
+        <span class="platosExplic">Mermelada de pimientos con queso crema</span>
+        <span class="platosExplic">Salsa de tomate seco</span>
+        <span class="platosPrecio">Todas las salsas son sin gluten y pueden acompañar cualquier tapa, ración o tostada.</span>
+      </div>
+    </section>
 
-/* ====== LINKS ====== */
-.link {
-  color: var(--color-terciario);
-  text-decoration: none;
-  text-shadow: none; /* 1px 1px 4px var(--color-sombra); */
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.eliicoptero path {
-  stroke: var(--color-terciario); /* Cambia el color de las líneas */
-}
-
-.eliicoptero {
-  fill: none;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 20px;
-  height: auto;
-  z-index: 1000;
-  pointer-events: none;
-  opacity: 0; /* oculto por defecto */
-  transition: opacity 0.5s ease;
-}
-
-.eliicoptero.visible {
-  opacity: 1; /* visible al llegar al final */
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .pantallaPpal {
-    height: var(--hero-altura-movil);
-    background-image: url("imagenes/fondo_ppal_02.png");
-    background-size: cover;
-    background-position: 47% center; /* mueve a la derecha */
-  }
-
-  .pantallaPpal::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--degradado);
-    pointer-events: none;
-  }
-
-  .boton-menu {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-  .infoTitulo {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
-  }
-
-  /* Esto por si el horario se ve feo en móvil
-  
-  .infoTexto {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .infoTexto br {
-    display: block;
-    margin-bottom: 0.4rem;
-  }*/
-}
+    <!-- COSAS SECRETAS -->
+    <svg class="eliicoptero" viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 50.764 155.28 C 66.061 152.499 107.213 144.605 122.553 142.049 C 133.704 140.19 145.474 139.586 156.335 136.418 C 162.656 134.575 169.246 134.113 175.479 132.195 C 176.287 131.947 178.211 131.997 178.857 131.351"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 55.55 132.758 C 64.075 132.758 73.039 136.017 81.45 137.263 C 98.11 139.731 114.83 142.346 131.561 144.019 C 140.75 144.938 155.065 149.003 164.256 150.328"
+      />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 231.784 122.342 C 238.544 120.652 245.624 123.186 252.335 123.186" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 234.599 118.119 C 236.8 118.669 244.171 124.272 244.171 127.128" />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 106.232 186.992 C 105.443 189.359 102.31 192.891 100.304 194.35 C 99.857 194.676 96.216 196.644 96.216 197.007 C 96.216 197.288 96.761 196.871 97.034 196.803 C 98.004 196.56 98.907 196.598 99.895 196.598 C 103.03 196.598 106.164 196.598 109.298 196.598 C 113.125 196.598 116.917 197.007 120.744 197.007 C 121.423 197.007 125.241 197.666 125.241 196.598"
+      />
+    </svg>
+    <script src="eliicoptero.js"></script>
+  </body>
+</html>

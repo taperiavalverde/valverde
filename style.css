@@ -75,7 +75,7 @@ body {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 20px var(--color-sombra-cajas);
-  border: 3px solid var(--color-ppal); /* Borde blanco principal */
+  /*border: 3px solid var(--color-ppal); /* Borde blanco principal */
 }
 
 .titulo {

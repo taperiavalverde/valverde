@@ -3,229 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Título de la pestaña del navegador -->
     <title>Menú Valverde</title>
-
-    <!-- ====== FUENTES ====== -->
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
-
-    <!-- ====== ESTILOS ====== 
-	 aquí carga la config general que es styles.css
-	 y la específica del menú que es menu.css
-	 -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="menu.css" />
   </head>
 
   <body class="estilosMenu">
-    <!-- ====== CABECERA Y LOGO ====== -->
+    <div class="heroFondo"></div>
+
     <header class="tituloarriba">
       <a href="index.html" class="logo">
-        <!-- Logo de VALVERDE como SVG -->
-        <!-- prettier-ignore -->
-        <svg class="logo-svg" viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" aria-label="Valverde" >
-          <text x="0" y="0" dominant-baseline="text-before-edge" font-size="240">
-            V
-          </text>
-          <text x="170" y="23" dominant-baseline="text-before-edge" font-size="160">
-            ALVERDE
-          </text>
+        <svg class="logo-svg" viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" aria-label="Valverde">
+          <text x="0" y="0" dominant-baseline="text-before-edge" font-size="240">V</text>
+          <text x="170" y="23" dominant-baseline="text-before-edge" font-size="160">ALVERDE</text>
         </svg>
       </a>
-
-      <!-- 	
-	
-	====== SEO INVISIBLE INICIO======
-
-
-	
-         Bloque que NO se ve en pantalla
-         Ayuda a Google a indexar la página correctamente, cosas de ChatPGT para mejorar visibilidad y tal
-		 queda pendiente investigar si poner "drogas gratis" es mejor o no.... 
-		 
-		 -->
       <h1 class="sr-only">Menú de la tapería Valverde</h1>
       <h2 class="sr-only">Para empezar / Tapas ligeras, Mar & Tierra, Especialidad de la casa, Snacks y Salsas multiuso</h2>
     </header>
 
-    <!-- 
-	
-	
-	====== SEO INVISIBLE FINAL ====== 
-	
-	
-	-->
-
-    <!-- 
-	
-	====== BARRA DE NAVEGACIÓN ====== 
-	
-	Si se quiere cambiar el nombre de una de las secciones, cambiar el nombre, NO EL #HASHTAG, NUNCA cambiar el #HASHTAG
-
-	en caso de querer añadir una nueva sección, quitar los símbolos de comentario al principio y final de la línea
-		<a href="#quinto">Nueva sección super wapa</a>
-	en caso de querer eliminar una sección, añadir los dímbolos de comentario al principio y final de la línea
-
-	IMPORTANTE, esto es doble, si se quita de aquí luego hay que quitarlo de abajo también
-
-	-->
     <nav class="barraNav" aria-label="Navegación del menú">
       <a href="#primero">Tapas ligeras</a>
       <a href="#segundo">Mar & Tierra</a>
       <a href="#tercero">Especialidad de la casa</a>
       <a href="#cuarto">Snacks</a>
-      <!-- <a href="#quinto">Nueva sección super wapa</a> -->
       <a href="#ultimo">Salsas</a>
     </nav>
 
-    <!-- 
-	
-	====== SECCIONES DEL MENÚ ====== 
-	
-	-->
-
-    <!-- Sección: Para empezar 
-	
-	Para cambiarle el nombre a la sección se tiene que cambiar en dos sitios
-	
-	-->
+    <!-- PARA EMPEZAR / TAPAS LIGERAS -->
     <section id="primero" class="gruposPlatos" aria-label="Para empezar">
-      <!-- Primero aria-label-->
       <h2 class="gruposPlatosMenu">Para empezar</h2>
-      <!-- Después aquí-->
-
-      <!-- Aquí van los diferentes PLATOS, para añadir un nuevo plato copiar este cacho:
-	   
-	  <div class="plato">
-        <span class="platosNombre">Nombre del plato</span>
-        <span class="platosExplic">Explicación del plato.</span>
-        <span class="platosPrecio">• Tapa: 3,5 € • Ración: 6,0 €</span>
-      </div>
-
-	  Para eliminar un plato de los que ya estén, eliminarlo!
-	 
-	  -->
-
-      <div class="plato">
-        <span class="platosNombre">Boquerones en cama de wakame</span>
-        <span class="platosExplic">Mayonesa de mango y curry, encurtidos caseros.</span>
-        <span class="platosPrecio">• Tapa: 3,5 € • Ración: 6,0 €</span>
-      </div>
-
-      <div class="plato">
-        <span class="platosNombre">Tartar de atún con salsa tataki</span>
-        <span class="platosExplic">Atún cortado a cuchillo, aguacate y cebolla morada, toque asiático.</span>
-        <span class="platosPrecio">• Tapa: 4,0 € • Ración: 6,5 €</span>
-      </div>
 
       <div class="plato">
         <span class="platosNombre">Patatas bravas y alioli</span>
         <span class="platosExplic">Crujientes y caseras, salsa brava y alioli sin gluten.</span>
-        <span class="platosPrecio">• Tapa: 3,0 € • Ración: 5,0 €</span>
+        <span class="platosPrecio">• Ración 5,00 €</span>
       </div>
 
-      <!-- 
-	  Hasta aquí la sección añadir los platos antes de aquí
-	  -->
-    </section>
-
-    <!-- 
-	
-	Sección: Mar & Tierra
-	
-	Para cambiarle el nombre a la sección se tiene que cambiar en dos sitios
-	
-	-->
-    <section id="segundo" class="gruposPlatos" aria-label="Mar & Tierra">
-      <!-- Primero aria-label-->
-      <h2 class="gruposPlatosMenu">Mar & Tierra</h2>
-      <!-- Después aquí-->
-
-      <!-- Los diferentes platos, si se quiere añadir uno, copiar el bloque de nuevo plato de antes y pegar aquí y estará en esta sección -->
+      <div class="plato">
+        <span class="platosNombre">Verduras de temporada a la plancha</span>
+        <span class="platosExplic">Servidas con aceite de oliva y opción de salsa chimichurri o ajo.</span>
+        <span class="platosPrecio">• Tapa 3,50 €</span>
+      </div>
 
       <div class="plato">
-        <span class="platosNombre">Pulpitos de roca sobre parmentier de patata</span>
-        <span class="platosExplic">Suaves y melosos sobre un puré cremoso de patata.</span>
-        <span class="platosPrecio">• Tapa: 4,5 € • Ración: 7,0 €</span>
+        <span class="platosNombre">Pimientos de Padrón</span>
+        <span class="platosExplic">Fritos con aceite de oliva y sal gruesa.</span>
+        <span class="platosPrecio">• Tapa 3,00 €</span>
+      </div>
+    </section>
+
+    <!-- MAR & TIERRA -->
+    <section id="segundo" class="gruposPlatos" aria-label="Mar & Tierra">
+      <h2 class="gruposPlatosMenu">Mar & Tierra</h2>
+
+      <div class="plato">
+        <span class="platosNombre">Zamburiñas con velo Ibérico</span>
+        <span class="platosExplic">Jugosas y apetitosas.</span>
+        <span class="platosPrecio">• Tapa 9,00 € / • Ración 18,00 €</span>
+      </div>
+
+      <div class="plato">
+        <span class="platosNombre">Pulpo sobre parmentier de patata</span>
+        <span class="platosExplic">Suaves, melosos, con un puré aromático.</span>
+        <span class="platosPrecio">• Tapa 5,00 €</span>
+      </div>
+
+      <div class="plato">
+        <span class="platosNombre">Mini rollitos de pulpo y queso Arzúa</span>
+        <span class="platosExplic">Crujientes y jugosos.</span>
+        <span class="platosPrecio">• Tapa 4,50 €</span>
       </div>
 
       <div class="plato">
         <span class="platosNombre">Raxo con patatas</span>
         <span class="platosExplic">Tradición gallega reinterpretada.</span>
-        <span class="platosPrecio">• Tapa: 4,0 € • Ración: 6,0 €</span>
+        <span class="platosPrecio">• Tapa 4,00 €</span>
       </div>
 
-      <!-- 
-	  Hasta aquí la sección añadir los platos antes de aquí
-	  -->
+      <div class="plato">
+        <span class="platosNombre">Risotto de champiñón portobello, jamón y parmesano</span>
+        <span class="platosExplic">Meloso, sabroso y cremoso.</span>
+        <span class="platosPrecio">• Tapa 4,50 € / • Ración 7,00 €</span>
+      </div>
+
+      <div class="plato">
+        <span class="platosNombre">Huevos rotos con jamón</span>
+        <span class="platosExplic">Huevo de corral, patata y jamón serrano.</span>
+        <span class="platosPrecio">• Ración 6,00 €</span>
+      </div>
     </section>
 
-    <!-- 
-	
-	Sección: Especialidad
-	
-	Para cambiarle el nombre a la sección se tiene que cambiar en dos sitios
-	
-	-->
-
+    <!-- ESPECIALIDAD DE LA CASA -->
     <section id="tercero" class="gruposPlatos" aria-label="Especialidad de la casa">
-      <!-- Primero aria-label-->
-      <h2 class="gruposPlatosMenu">Especialidad de la casa</h2>
-      <!-- Después aquí-->
+      <h2 class="gruposPlatosMenu">Arepas deconstruídas</h2>
 
-      <!-- Los diferentes platos, si se quiere añadir uno, copiar el bloque de nuevo plato de antes y pegar aquí y estará en esta sección -->
       <div class="plato">
         <span class="platosNombre">Reina Pepiada</span>
         <span class="platosExplic">Pollo desmechado, aguacate y mayonesa casera.</span>
-        <span class="platosPrecio">• Tapa: 4,0 € • Ración: 6,5 €</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
       </div>
 
-      <!-- 
-	  Hasta aquí la sección añadir los platos antes de aquí
-	  -->
+      <div class="plato">
+        <span class="platosNombre">La Catira</span>
+        <span class="platosExplic">Pollo desmechado y queso fundido.</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
+      </div>
+
+      <div class="plato">
+        <span class="platosNombre">La Pelúa</span>
+        <span class="platosExplic">Carne mechada y queso fundido.</span>
+        <span class="platosPrecio">• Tapa (tosta) 4,00 €</span>
+      </div>
     </section>
 
-    <!-- Sección: Snacks
-	
-	Para cambiarle el nombre a la sección se tiene que cambiar en dos sitios
-	
-	-->
+    <!-- SNACKS Y TAPAS DIVERTIDAS -->
     <section id="cuarto" class="gruposPlatos" aria-label="Snacks y tapas divertidas">
-      <!-- Primero aria-label-->
       <h2 class="gruposPlatosMenu">Snacks y tapas divertidas</h2>
-      <!-- Después aquí-->
 
-      <!-- Los diferentes platos, si se quiere añadir uno, copiar el bloque de nuevo plato de antes y pegar aquí y estará en esta sección -->
       <div class="plato">
         <span class="platosNombre">Totopos de maíz con queso y pico de gallo</span>
         <span class="platosExplic">Crujientes y frescos, para compartir.</span>
-        <span class="platosPrecio">• Tapa: 3,5 € • Ración: 5,5 €</span>
+        <span class="platosPrecio">• Tapa 3,50 € / • Ración 5,50 €</span>
       </div>
 
-      <!-- 
-	  Hasta aquí la sección añadir los platos antes de aquí
-	  -->
+      <div class="plato">
+        <span class="platosNombre">Tabla de quesos</span>
+        <span class="platosExplic">Selección de 3–4 quesos, mermelada de pimientos con queso crema y tostas sin gluten.</span>
+        <span class="platosPrecio">• Ración 8,00 €</span>
+      </div>
     </section>
 
-    <!-- 
-	
-	
-	Sección: Salsas multiuso la especial que dejaremos siempre al final
-	
-	Para cambiarle el nombre a la sección se tiene que cambiar en dos sitios
-	
-	-->
+    <!-- SALSA MULTIUSO / PARA ACOMPAÑAR -->
     <section id="ultimo" class="gruposPlatos" aria-label="Salsas multiuso">
-      <!-- Primero aria-label-->
-      <h2 class="gruposPlatosMenu">Salsas multiuso</h2>
-      <!-- Después aquí-->
-
-      <!-- Las salsas funcionan diferente a los platos para que se vea visualmente diferente 
-	 	Para añadir una nueva, simplemente  
-		<span class="platosExplic">Nueva salsa</span>
-		Para eliminar una salsa, eliminar la línea
-	  -->
+      <h2 class="gruposPlatosMenu">Salsas para acompañar</h2>
 
       <div class="plato">
         <span class="platosExplic">Alioli / ajo</span>
@@ -234,19 +146,39 @@
         <span class="platosExplic">Bacon crujiente</span>
         <span class="platosExplic">Mermelada de pimientos con queso crema</span>
         <span class="platosExplic">Salsa de tomate seco</span>
-        <!-- <span class="platosExplic">Nueva salsa</span> -->
-        <span class="platosPrecio"> Todas las salsas son sin gluten y pueden acompañar cualquier tapa, ración o tostada. </span>
+        <span class="platosPrecio">Todas las salsas son sin gluten y pueden acompañar cualquier tapa, ración o tostada.</span>
       </div>
-
-      <!-- 
-	  Hasta aquí la sección 
-	  -->
     </section>
 
-    <!-- ====== COSAS SECRETAS ====== -->
-    <!-- prettier-ignore -->
-    <svg class="eliicoptero" viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624" /><path fill="none" stroke="currentColor" stroke-width="2" d="M 50.764 155.28 C 66.061 152.499 107.213 144.605 122.553 142.049 C 133.704 140.19 145.474 139.586 156.335 136.418 C 162.656 134.575 169.246 134.113 175.479 132.195 C 176.287 131.947 178.211 131.997 178.857 131.351" /><path fill="none" stroke="currentColor" stroke-width="2" d="M 55.55 132.758 C 64.075 132.758 73.039 136.017 81.45 137.263 C 98.11 139.731 114.83 142.346 131.561 144.019 C 140.75 144.938 155.065 149.003 164.256 150.328" /><path fill="none" stroke="currentColor" stroke-width="2" d="M 231.784 122.342 C 238.544 120.652 245.624 123.186 252.335 123.186" /><path fill="none" stroke="currentColor" stroke-width="2" d="M 234.599 118.119 C 236.8 118.669 244.171 124.272 244.171 127.128" /><path fill="none" stroke="currentColor" stroke-width="2" d="M 106.232 186.992 C 105.443 189.359 102.31 192.891 100.304 194.35 C 99.857 194.676 96.216 196.644 96.216 197.007 C 96.216 197.288 96.761 196.871 97.034 196.803 C 98.004 196.56 98.907 196.598 99.895 196.598 C 103.03 196.598 106.164 196.598 109.298 196.598 C 113.125 196.598 116.917 197.007 120.744 197.007 C 121.423 197.007 125.241 197.666 125.241 196.598" /></svg>
+    <!-- COSAS SECRETAS -->
+    <svg class="eliicoptero" viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 50.764 155.28 C 66.061 152.499 107.213 144.605 122.553 142.049 C 133.704 140.19 145.474 139.586 156.335 136.418 C 162.656 134.575 169.246 134.113 175.479 132.195 C 176.287 131.947 178.211 131.997 178.857 131.351"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 55.55 132.758 C 64.075 132.758 73.039 136.017 81.45 137.263 C 98.11 139.731 114.83 142.346 131.561 144.019 C 140.75 144.938 155.065 149.003 164.256 150.328"
+      />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 231.784 122.342 C 238.544 120.652 245.624 123.186 252.335 123.186" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 234.599 118.119 C 236.8 118.669 244.171 124.272 244.171 127.128" />
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        d="M 106.232 186.992 C 105.443 189.359 102.31 192.891 100.304 194.35 C 99.857 194.676 96.216 196.644 96.216 197.007 C 96.216 197.288 96.761 196.871 97.034 196.803 C 98.004 196.56 98.907 196.598 99.895 196.598 C 103.03 196.598 106.164 196.598 109.298 196.598 C 113.125 196.598 116.917 197.007 120.744 197.007 C 121.423 197.007 125.241 197.666 125.241 196.598"
+      />
+    </svg>
     <script src="eliicoptero.js"></script>
-    <!-- ====== COSAS SECRETAS FINAL ====== -->
   </body>
 </html>

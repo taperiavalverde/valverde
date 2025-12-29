@@ -1,17 +1,8 @@
 /* ====== VARIABLES ====== */
 :root {
-  /* Colores 
-  
- LO ÚNICO QUE PODÉIS TOCAR DE AQUÍ SIN MI MIRADA ACUSATORA SON LOS COLORES:
-
- simplemente 
- color: #codigo;
- o
- color: rgba(red,green,blue);
- y se cambia el valor del color al color ese
- 
-  */
+  /* Colores */
   --color-fondo: #264d2a;
+  --color-fondo-rgb: 38, 77, 42; /* rojo, verde, azul */
   --color-ppal: #ffffff;
   --color-sec: #e6e6e6;
   --color-terciario: #000000;
@@ -24,6 +15,10 @@
   /* Tipografías */
   --letras-grupos: 2.5rem; /* títulos info y menú */
   --letras-textos: 1rem; /* texto normal */
+
+  --hero-altura-movil: 100vh;
+
+  --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.25) 45%, rgba(var(--color-fondo-rgb), 0.85) 80%, var(--color-fondo) 100%);
 }
 
 /* ====== RESET ====== */
@@ -54,29 +49,33 @@ body {
 
 /* ====== HERO ====== */
 .pantallaPpal {
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  background-image: url("imagenes/fondo_ppal_02.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.pantallaPpal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--degradado);
+  pointer-events: none;
 }
 
 .rectangulo {
+  position: relative;
+  z-index: 1;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 20px var(--color-sombra-cajas);
   border: 3px solid var(--color-ppal); /* Borde blanco principal */
-}
-
-.logo-svg {
-  width: auto;
-  height: clamp(80px, 15vw, 240px); /* igual que .titulo-v */
-}
-
-.logo-svg text {
-  font-family: "Cardo", serif;
-  fill: var(--color-ppal);
-  text-shadow: 2px 2px 6px var(--color-sombra);
 }
 
 .titulo {
@@ -98,6 +97,17 @@ body {
 
 .titulo-resto {
   font-size: clamp(53px, 10vw, 160px);
+}
+
+.logo-svg {
+  width: auto;
+  height: clamp(80px, 15vw, 240px); /* igual que .titulo-v */
+}
+
+.logo-svg text {
+  font-family: "Cardo", serif;
+  fill: var(--color-ppal);
+  text-shadow: 2px 2px 6px var(--color-sombra);
 }
 
 /* ====== BOTÓN ====== */
@@ -156,7 +166,7 @@ body {
 .link {
   color: var(--color-terciario);
   text-decoration: none;
-  text-shadow: none; /* 1px 1px 2px var(--color-sombra);*/
+  text-shadow: none; /* 1px 1px 4px var(--color-sombra); */
 }
 
 .link:hover {
@@ -186,6 +196,21 @@ body {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+  .pantallaPpal {
+    height: var(--hero-altura-movil);
+    background-image: url("imagenes/fondo_ppal_02.png");
+    background-size: cover;
+    background-position: 47% center; /* mueve a la derecha */
+  }
+
+  .pantallaPpal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--degradado);
+    pointer-events: none;
+  }
+
   .boton-menu {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
@@ -193,4 +218,16 @@ body {
   .infoTitulo {
     font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
   }
+
+  /* Esto por si el horario se ve feo en móvil
+  
+  .infoTexto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .infoTexto br {
+    display: block;
+    margin-bottom: 0.4rem;
+  }*/
 }

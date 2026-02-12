@@ -1,27 +1,19 @@
-/* ====== VARIABLES ====== */
 :root {
-  /* Colores */
   --color-fondo: #264d2a;
-  --color-fondo-rgb: 38, 77, 42; /* rojo, verde, azul */
+  --color-fondo-rgb: 38, 77, 42;
   --color-ppal: #ffffff;
   --color-sec: #e6e6e6;
   --color-terciario: #000000;
-  --color-fondo-semi: rgba(255, 255, 255, 0.16);
+  --color-fondo-semi: rgba(255, 255, 255, 0.12);
+  --color-fondo-semi-oscuro: rgba(255, 255, 255, 0.85);
 
-  /* Sombras */
-  --color-sombra: #000000;
-  --color-sombra-cajas: rgba(0, 0, 0, 0.2);
+  --color-sombra: rgba(0, 0, 0, 0.6);
+  --color-sombra-cajas: rgba(0, 0, 0, 0.25);
 
-  /* Tipografías */
-  --letras-grupos: 2.5rem; /* títulos info y menú */
-  --letras-textos: 1rem; /* texto normal */
-
-  --hero-altura-movil: 100vh;
-
-  --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.25) 45%, rgba(var(--color-fondo-rgb), 0.85) 80%, var(--color-fondo) 100%);
+  --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.3) 50%, rgba(var(--color-fondo-rgb), 0.9) 85%, var(--color-fondo) 100%);
 }
 
-/* ====== RESET ====== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -34,31 +26,22 @@ body {
   background-color: var(--color-fondo);
 }
 
-/* ====== SEO INVISIBLE ====== */
+/* SEO INVISIBLE */
 .sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
-/* ====== HERO ====== */
+/* HERO */
 .pantallaPpal {
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  background-image: url("imagenes/fondo_ppal_02.png");
+  background-image: url("imagenes/fondo_ppal_02_01.png");
   background-size: cover;
-  background-position: center;
+  background-position: 50% center;
 }
 
 .pantallaPpal::after {
@@ -66,168 +49,161 @@ body {
   position: absolute;
   inset: 0;
   background: var(--degradado);
-  pointer-events: none;
 }
 
+/* BOTÓN */
 .rectangulo {
   position: relative;
   z-index: 1;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px var(--color-sombra-cajas);
-  /*border: 3px solid var(--color-ppal); /* Borde blanco principal */
-}
-
-.titulo {
   display: flex;
   justify-content: center;
-  white-space: nowrap;
+  padding-top: 45vh;
 }
 
-.titulo-v,
-.titulo-resto {
-  color: var(--color-ppal);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-  line-height: 1;
-}
-
-.titulo-v {
-  font-size: clamp(80px, 15vw, 240px);
-}
-
-.titulo-resto {
-  font-size: clamp(53px, 10vw, 160px);
-}
-
-.logo-svg {
-  width: auto;
-  height: clamp(80px, 15vw, 240px); /* igual que .titulo-v */
-}
-
-.logo-svg text {
-  font-family: "Cardo", serif;
-  fill: var(--color-ppal);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-}
-
-/* ====== BOTÓN ====== */
 .boton-menu {
-  display: inline-block;
-  margin-top: 1rem;
   padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--color-ppal);
   text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: bold;
   border-radius: 12px;
-  box-shadow: 0 6px 12px var(--color-sombra-cajas), 0 0 0 1px var(--color-ppal);
-  text-shadow: 1px 1px 4px var(--color-sombra);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow:
+    0 6px 14px var(--color-sombra-cajas),
+    0 0 0 1px var(--color-ppal);
+  text-shadow: 1px 1px 3px var(--color-sombra);
+  transition: transform 0.2s ease;
 }
 
 .boton-menu:hover {
-  transform: scale(1.06);
-  box-shadow: 0 8px 18px var(--color-sombra-cajas);
+  transform: scale(1.05);
 }
 
-/* ====== BLOQUE INFO ====== */
-.pantalla1abajo {
-  margin: 2rem auto;
-  padding: 3rem 2rem;
-  max-width: 90vw;
-  background-color: var(--color-fondo-semi);
-  border-radius: 20px;
-  box-shadow: 0 8px 16px var(--color-sombra-cajas);
+/* SLOGAN */
+.slogan {
+  position: absolute;
+  bottom: 18vh;
+  width: 100%;
   text-align: center;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 8px var(--color-sombra);
+  z-index: 1;
+}
+
+/* INFO BLOQUE */
+.pantalla1abajo {
+  margin: 3rem auto;
+  padding: 3.5rem 3rem;
+  max-width: 1100px;
+  background-color: transparent;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  /* animación de aparición móvil */
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .infoBloque {
-  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.icono {
+  width: 1.3rem;
+  height: 1.3rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: var(--color-sec);
 }
 
 .infoTitulo {
   display: block;
-  font-size: var(--letras-grupos); /* igual que menú */
-  font-weight: bold;
-  color: var(--color-sec);
-  text-shadow: 2px 2px 6px var(--color-sombra);
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+  color: var(--color-terciario);
 }
 
 .infoTexto {
-  display: block;
-  font-size: var(--letras-textos);
-  color: var(--color-ppal);
-  text-shadow: 1px 1px 3px var(--color-sombra);
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-sec);
 }
 
-/* ====== LINKS ====== */
+/* LINKS */
 .link {
-  color: var(--color-terciario);
+  color: var(--color-sec);
   text-decoration: none;
-  text-shadow: none; /* 1px 1px 4px var(--color-sombra); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1px;
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom-color: var(--color-ppal);
 }
 
-.eliicoptero path {
-  stroke: var(--color-terciario); /* Cambia el color de las líneas */
-}
-
+/* eliicoptero */
 .eliicoptero {
-  fill: none;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   width: 20px;
-  height: auto;
-  z-index: 1000;
+  opacity: 0;
   pointer-events: none;
-  opacity: 0; /* oculto por defecto */
-  transition: opacity 0.5s ease;
 }
 
-.eliicoptero.visible {
-  opacity: 1; /* visible al llegar al final */
-}
-
-/* ====== RESPONSIVE ====== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  /* HERO más compacto */
   .pantallaPpal {
-    height: var(--hero-altura-movil);
-    background-image: url("imagenes/fondo_ppal_02.png");
-    background-size: cover;
-    background-position: 47% center; /* mueve a la derecha */
+    height: 70vh; /* antes 100vh */
   }
 
-  .pantallaPpal::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--degradado);
-    pointer-events: none;
+  .rectangulo {
+    padding-top: 32vh; /* mantiene el botón en el lugar correcto */
   }
 
+  /* BLOQUE INFERIOR más cerca del hero y animado */
+  .pantalla1abajo {
+    margin-top: 0.5rem; /* más cerca del hero */
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+    text-align: center;
+    opacity: 0; /* empieza invisible */
+    transform: translateY(20px); /* ligeramente abajo */
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  .pantalla1abajo.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* InfoBloques centrados en móvil */
+  .infoBloque {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Slogan mantiene posición */
+  .slogan {
+    bottom: 22vh;
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+  }
+
+  /* Botón más pequeño */
   .boton-menu {
     font-size: 1rem;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.6rem;
   }
-  .infoTitulo {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupos));
-  }
-
-  /* Esto por si el horario se ve feo en móvil
-  
-  .infoTexto {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .infoTexto br {
-    display: block;
-    margin-bottom: 0.4rem;
-  }*/
 }

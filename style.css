@@ -39,7 +39,7 @@ body {
 .pantallaPpal {
   position: relative;
   height: 100vh;
-  background-image: url("imagenes/fondo_ppal_02.png");
+  background-image: url("imagenes/fondo_ppal_02_01.png");
   background-size: cover;
   background-position: 50% center;
 }

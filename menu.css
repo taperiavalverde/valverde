@@ -31,7 +31,7 @@ body.estilosMenu {
   /* la imagen decide la altura */
   aspect-ratio: 3280 / 3080; /* AJUSTA a la proporción real de fondo_menu_doble.png */
 
-  background-image: url("imagenes/fondo_menu_doble.png");
+  background-image: url("imagenes/fondo_menu_01.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

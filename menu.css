@@ -189,4 +189,43 @@ html {
   html {
     scroll-padding-top: 180px;
   }
+
+  .vinos {
+  text-align: center;
+}
+
+.tituloVinos {
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+.tablaVinos {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cabecera,
+.fila {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cabecera {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tipoVino {
+  text-align: left;
+  font-style: italic;
+  margin: 2rem 0 0.5rem;
+}
+
+.nombre {
+  text-align: left;
+}
+
 }

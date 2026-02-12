@@ -8,10 +8,8 @@
   --hero-altura-movil: 100vh;
 }
 
-/* ====== SCROLL GLOBAL ====== */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
 }
 
 /* ====== BODY ====== */
@@ -19,18 +17,18 @@ body.estilosMenu {
   margin: 0;
   font-family: "Cardo", serif;
   color: var(--color-sec);
-  background-color: var(--color-fondo);
+  background-color: var(--color-fondo); /* color que se ve al scrollear */
   position: relative;
 }
 
-/* ====== FONDO HERO ====== */
+/* ====== FONDO HERO (solo visual) ====== */
 .heroFondo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background-image: url("imagenes/fondo_menu_01.png");
+  height: 100vh; /* altura inicial visible */
+  background-image: url("imagenes/fondo_menu_02.png");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -43,10 +41,10 @@ body.estilosMenu {
   background: var(--degradado);
 }
 
-/* ====== CONTENIDO ENCIMA ====== */
+/* ====== CONTENIDO ENCIMA DEL FONDO ====== */
 .menuHero {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* encima del fondo */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,17 +67,12 @@ body.estilosMenu {
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
 
-/* ====== NAV ====== */
+/* ====== BARRA DE NAVEGACIÓN ====== */
 .barraNav {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: linear-gradient(
-    to bottom,
-    rgba(var(--color-fondo-rgb), 0) 0%,
-    rgba(var(--color-fondo-rgb), 0.5) 30%,
-    rgba(var(--color-fondo-rgb), 1) 100%
-  );
+  background: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.5) 30%, rgba(var(--color-fondo-rgb), 1) 100%);
   padding: 0.75rem 0;
   text-align: center;
   border-top: 2px solid var(--color-terciario);
@@ -98,7 +91,7 @@ body.estilosMenu {
   color: var(--color-terciario);
 }
 
-/* ====== GRUPOS ====== */
+/* ====== GRUPOS DE PLATOS ====== */
 .gruposPlatos {
   background-color: var(--color-fondo-semi);
   margin: 2rem auto;
@@ -147,47 +140,56 @@ body.estilosMenu {
   font-weight: bold;
 }
 
+.platosPrecio {
+  display: block;
+  font-size: var(--letras-precio);
+  color: var(--color-terciario);
+  font-weight: bold;
+}
+
+/* ====== VINOS INTEGRADOS EN ESTILO ====== */
+
+.subgrupoVino {
+  display: block;
+  text-align: center;
+  font-size: var(--letras-platos); /* mismo tamaño que platosNombre (1.3rem) */
+  font-weight: bold;
+  color: var(--color-sec);
+  text-shadow: 1px 1px 4px var(--color-sombra);
+
+  margin: 2rem 0 1rem; /* mismo ritmo vertical que el resto */
+}
+
+/* reutiliza .plato pero ajusta layout */
+.plato.vino {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+/* nombre alineado izquierda */
+.plato.vino .platosNombre {
+  flex: 1;
+  text-align: left;
+}
+
+/* precios alineados derecha */
+.vinoPrecios {
+  font-size: var(--letras-precio);
+  color: var(--color-terciario);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 .page-end {
   height: 30vh;
 }
 
-/* ====== VINOS ====== */
-.vinos {
-  text-align: center;
-}
-
-.tituloVinos {
-  font-size: 2.5rem;
-  letter-spacing: 0.3rem;
-  margin-bottom: 2rem;
-}
-
-.tablaVinos {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.cabecera,
-.fila {
-  display: grid;
-  grid-template-columns: 1fr 80px 80px;
-  gap: 1rem;
-  align-items: center;
-}
-
-.cabecera {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.tipoVino {
-  text-align: left;
-  font-style: italic;
-  margin: 2rem 0 0.5rem;
-}
-
-.nombre {
-  text-align: left;
+/* ====== SCROLL GLOBAL ====== */
+html {
+  scroll-padding-top: 120px; /* espacio para barra sticky */
 }
 
 /* ====== RESPONSIVE ====== */
@@ -196,7 +198,7 @@ body.estilosMenu {
     height: var(--hero-altura-movil);
     background-image: url("imagenes/fondo_ppal_02.png");
     background-size: cover;
-    background-position: 47% center;
+    background-position: 47% center; /* mueve a la derecha */
   }
 
   .heroFondo::after {
@@ -226,6 +228,7 @@ body.estilosMenu {
     font-size: 1.8rem;
   }
 
+  /* Aquí para cambiar la altura a la que "salta" la barra nav */
   html {
     scroll-padding-top: 180px;
   }

@@ -1,15 +1,13 @@
 /* ====== VARIABLES ====== */
 :root {
-  --letras-grupoMenu: 2.5rem;
-  --letras-platos: 1.3rem;
-  --letras-expl: 1rem;
-  --letras-precio: 1rem;
-
   --hero-altura-movil: 100vh;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ====== BODY ====== */
@@ -18,27 +16,38 @@ body.estilosMenu {
   font-family: "Cardo", serif;
   color: var(--color-sec);
   background-color: var(--color-fondo); /* color que se ve al scrollear */
-  position: relative;
+  overflow-x: visible;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ====== FONDO HERO (solo visual) ====== */
 .heroFondo {
-  position: absolute;
+  /* Se simplifica para que solo sea un color de fondo, como se definió en el style inline
+  background:
+    linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 90%, rgba(var(--color-fondo-rgb), 1) 100%),
+    url("imagenes/fondo_menu_doble.png") no-repeat center top;*/
+  opacity: 1;
+  position: absolute; /* Para que se mueva al hacer scroll */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* altura inicial visible */
-  background-image: url("imagenes/fondo_menu_01.png");
+  height: 200vh; /* Aumentamos la altura para mostrar la imagen completa (escena doble) */
   background-size: cover;
-  background-position: center;
   z-index: 0;
 }
 
 .heroFondo::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: var(--degradado);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%; /* controla la suavidad del fundido */
+
+  background: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 1) 100%);
+
+  pointer-events: none;
 }
 
 /* ====== CONTENIDO ENCIMA DEL FONDO ====== */
@@ -61,7 +70,7 @@ body.estilosMenu {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: var(--color-ppal);
   text-decoration: none;
   text-shadow: 2px 2px 6px var(--color-sombra);
@@ -74,62 +83,92 @@ body.estilosMenu {
   height: auto; /* mantiene proporción */
   display: block;
   margin: 0 auto;
-  fill: var(--color-ppal);
 }
 
 /* ====== BARRA DE NAVEGACIÓN ====== */
 .barraNav {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.5) 30%, rgba(var(--color-fondo-rgb), 1) 100%);
+  z-index: 1000;
+  background: var(--degradado); /* Fondo degradado igual que en móvil */
   padding: 0.75rem 0;
   text-align: center;
-  border-top: 2px solid var(--color-terciario);
-  border-bottom: 2px solid var(--color-terciario);
+  border-top: 2px solid var(--color-resalte);
+  border-bottom: 2px solid var(--color-resalte);
+  display: flex;
+  justify-content: center;
 }
 
 .barraNav a {
+  position: sticky;
   color: var(--color-sec);
   text-decoration: none;
   font-weight: bold;
   margin: 0 1rem;
+  padding: var(--touch-padding); /* Más fácil de pulsar con el dedo */
   text-shadow: 1px 1px 3px var(--color-sombra);
 }
 
-.barraNav a:hover {
-  color: var(--color-terciario);
+.barraNav a:hover,
+.barraNav a.activo {
+  color: var(--color-resalte);
 }
 
 /* ====== GRUPOS DE PLATOS ====== */
 .gruposPlatos {
-  background-color: var(--color-fondo-semi);
+  background-color: rgba(var(--color-fondo-rgb), 0.5);
   margin: 2rem auto;
   padding: 2rem;
-  border-radius: 16px;
-  max-width: 900px;
+  border-radius: 8px; /* Un radio más sutil */
+  max-width: 600px; /* Más ancho para escritorio */
   position: relative;
   z-index: 2;
 }
 
 .gruposPlatosMenu {
   text-align: center;
-  color: var(--color-sec);
-  font-size: var(--letras-grupoMenu);
+  color: var(--color-ppal);
+  font-size: clamp(1.8rem, 6vw, var(--letras-grupoMenu));
   margin-bottom: 2rem;
   text-shadow: 2px 2px 6px var(--color-sombra);
 }
 
 /* ====== PLATOS ====== */
 .plato {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  overflow: visible;
+  border-bottom: none;
+  /* text-align: left; */
   text-align: center;
+}
+
+/* ====== EFECTO ZIGZAG ====== */
+/* Aplica a los platos pares (2, 4, 6...) dentro de su contenedor */
+/* .plato:nth-of-type(even) {
+  flex-direction: row-reverse;
+} */
+
+/* .plato:nth-of-type(even) .plato-info {
+  text-align: right;
+} */
+
+.plato-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el texto de los platos horizontalmente */
+  position: relative;
+  z-index: 10;
 }
 
 .platosNombre {
   display: block;
-  font-size: var(--letras-platos);
+  font-size: clamp(1.1rem, 4vw, var(--letras-platos));
   font-weight: bold;
   color: var(--color-sec);
   text-shadow: 1px 1px 4px var(--color-sombra);
@@ -137,7 +176,7 @@ body.estilosMenu {
 
 .platosExplic {
   display: block;
-  font-size: var(--letras-expl);
+  font-size: clamp(0.9rem, 3vw, var(--letras-expl));
   opacity: 0.85;
   margin: 0.25rem 0 0.5rem;
   text-shadow: 1px 1px 3px var(--color-sombra);
@@ -145,56 +184,72 @@ body.estilosMenu {
 
 .platosPrecio {
   display: block;
-  font-size: var(--letras-precio);
-  color: var(--color-terciario);
+  font-size: clamp(0.9rem, 3vw, var(--letras-precio));
+  color: var(--color-resalte);
   font-weight: bold;
 }
 
-.platosPrecio {
-  display: block;
-  font-size: var(--letras-precio);
-  color: var(--color-terciario);
-  font-weight: bold;
+.plato-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px var(--color-sombra-fuerte);
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
 }
 
-/* ====== VINOS INTEGRADOS EN ESTILO ====== */
-
-.subgrupoVino {
-  display: block;
-  text-align: center;
-  font-size: var(--letras-platos); /* mismo tamaño que platosNombre (1.3rem) */
-  font-weight: bold;
-  color: var(--color-sec);
-  text-shadow: 1px 1px 4px var(--color-sombra);
-
-  margin: 2rem 0 1rem; /* mismo ritmo vertical que el resto */
+/* Imágenes saliendo del contenedor */
+.plato:nth-of-type(odd) .plato-img {
+  margin-right: 0;
 }
 
-/* reutiliza .plato pero ajusta layout */
-.plato.vino {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  gap: 1rem;
+.plato:nth-of-type(even) .plato-img {
+  margin-left: 0;
 }
 
-/* nombre alineado izquierda */
-.plato.vino .platosNombre {
-  flex: 1;
-  text-align: left;
-}
-
-/* precios alineados derecha */
-.vinoPrecios {
-  font-size: var(--letras-precio);
-  color: var(--color-terciario);
-  font-weight: bold;
-  white-space: nowrap;
+.plato-img.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .page-end {
   height: 30vh;
+}
+
+/* ====== BOTÓN VOLVER ARRIBA ====== */
+.btn-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-dorado);
+  color: var(--color-fondo);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px var(--color-sombra-media);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  z-index: 999;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-arriba.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.btn-arriba:hover {
+  transform: scale(1.1);
 }
 
 /* ====== SCROLL GLOBAL ====== */
@@ -203,43 +258,67 @@ html {
 }
 
 /* ====== RESPONSIVE ====== */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .heroFondo {
-    height: var(--hero-altura-movil);
-    background-image: url("imagenes/fondo_ppal_02.png");
+  /* ====== FONDO DE PANTALLA REAL CON DEGRADADO ====== */
+  body.estilosMenu {
+    background:
+      linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 90%, rgba(var(--color-fondo-rgb), 1) 100%),
+      url("imagenes/fondo_menu_doble.png") no-repeat center top;
     background-size: cover;
-    background-position: 47% center; /* mueve a la derecha */
+    background-attachment: scroll; /* Se mueve al hacer scroll */
   }
 
-  .heroFondo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--degradado);
-    pointer-events: none;
-  }
-
+  /* Barra de navegación */
   .barraNav {
-    display: flex;
-    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+    padding: 0.5rem 0; /* Eliminamos el padding lateral para que ocupe todo el ancho */
     background: var(--degradado);
+    border-top: 1px solid var(--color-fondo-semi);
+    border-bottom: 1px solid var(--color-fondo-semi);
   }
 
+  .barraNav a {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Grupos de platos */
   .gruposPlatos {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 95%; /* Ajusta el ancho máximo */
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
   }
 
-  .gruposPlatosMenu {
-    font-size: clamp(1.6rem, 6vw, var(--letras-grupoMenu));
+  .logo-svg {
+    width: 180px;
+    max-width: 90%;
   }
 
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  /* Aquí para cambiar la altura a la que "salta" la barra nav */
+  /* Ajuste scroll para barra sticky */
   html {
     scroll-padding-top: 180px;
   }
+
+  /* Espacio reducido entre imagen y texto en móvil */
+  .plato {
+    padding: 0.5rem 0; /* Reduce el padding vertical */
+    gap: 0.5rem; /* Reduce el espacio entre imagen y texto */
+  }
+}
+
+/* Posición del eliicoptero en menu.html */
+.estilosMenu .eliicoptero {
+  left: 1rem;
+  right: auto; /* Desactiva la propiedad 'right' para que 'left' tenga efecto */
 }

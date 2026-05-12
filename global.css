@@ -1,0 +1,107 @@
+/* ====== VARIABLES GLOBALES ====== */
+/* Definición de colores, sombras y tipografías para toda la web */
+:root {
+  --color-fondo: #264d2a;
+  --color-fondo-rgb: 38, 77, 42;
+  --color-ppal: #ffffff;
+  --color-sec: #e6e6e6;
+  --color-terciario: #000000;
+  --color-resalte: #f3e5ab; /* Beige dorado para contraste accesible */
+  --color-fondo-semi: rgba(255, 255, 255, 0.12);
+  --color-fondo-semi-oscuro: rgba(255, 255, 255, 0.85);
+
+  --color-dorado: #d4af37; /* Nuevo color para botón volver arriba */
+
+  --color-sombra: rgba(0, 0, 0, 0.6);
+  --color-sombra-cajas: rgba(0, 0, 0, 0.25);
+  --color-sombra-media: rgba(0, 0, 0, 0.3);
+  --color-sombra-fuerte: rgba(0, 0, 0, 0.5);
+
+  --color-borde-link: rgba(255, 255, 255, 0.4);
+  --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.3) 50%, rgba(var(--color-fondo-rgb), 0.9) 85%, var(--color-fondo) 100%);
+
+  /* Tipografía Menú */
+  --letras-grupoMenu: 2.5rem;
+  --letras-platos: 1.3rem;
+  --letras-expl: 1rem;
+  --letras-precio: 1rem;
+
+  /* Espaciado táctil estándar */
+  --touch-padding: 12px;
+  --border-radius-std: 12px;
+}
+
+/* ====== RESET BÁSICO ====== */
+/* Elimina márgenes y paddings por defecto de los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Comportamiento de scroll suave para anclas */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ====== ESTILOS GENERALES DEL BODY ====== */
+body {
+  font-family: "Cardo", serif;
+  color: var(--color-ppal);
+  background-color: var(--color-fondo);
+  overflow-x: visible;
+  width: 100%;
+  max-width: 100%;
+  position: relative; /* Asegura que elementos absolutos (como el centinela) se posicionen respecto al contenido */
+}
+
+/* ====== UTILIDADES DE ACCESIBILIDAD (SEO) ====== */
+/* Clase para ocultar elementos visualmente pero mantenerlos para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* ====== ENLACES ====== */
+/* Estilo personalizado para links dentro del texto */
+.link {
+  color: var(--color-sec);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-borde-link);
+  padding-bottom: 1px;
+}
+
+.link:hover {
+  border-bottom-color: var(--color-ppal);
+}
+
+/* ====== ELEMENTOS DECORATIVOS (ELICÓPTERO) ====== */
+/* SVG decorativo fijo en la esquina */
+.eliicoptero {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 30px; /* Un pelín más grande para que se vea en el PC táctil */
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ====== ACCESIBILIDAD ====== */
+/* Respeta la preferencia del usuario de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

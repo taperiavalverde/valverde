@@ -1,13 +1,83 @@
-document.addEventListener("scroll", () => {
-  const eliicoptero = document.querySelector(".eliicoptero");
-  if (!eliicoptero) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("contenedor-eli");
+  if (!container) return;
 
-  const scrollActual = window.scrollY + window.innerHeight;
-  const alturaTotal = document.documentElement.scrollHeight;
+  // 1. Inyectamos el SVG directamente para limpiar los archivos HTML
+  container.innerHTML = `
+    <svg viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 50.764 155.28 C 66.061 152.499 107.213 144.605 122.553 142.049 C 133.704 140.19 145.474 139.586 156.335 136.418 C 162.656 134.575 169.246 134.113 175.479 132.195 C 176.287 131.947 178.211 131.997 178.857 131.351" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 55.55 132.758 C 64.075 132.758 73.039 136.017 81.45 137.263 C 98.11 139.731 114.83 142.346 131.561 144.019 C 140.75 144.938 155.065 149.003 164.256 150.328" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 231.784 122.342 C 238.544 120.652 245.624 123.186 252.335 123.186" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 234.599 118.119 C 236.8 118.669 244.171 124.272 244.171 127.128" />
+      <path fill="none" stroke="currentColor" stroke-width="2" d="M 106.232 186.992 C 105.443 189.359 102.31 192.891 100.304 194.35 C 99.857 194.676 96.216 196.644 96.216 197.007 C 96.216 197.288 96.761 196.871 97.034 196.803 C 98.004 196.56 98.907 196.598 99.895 196.598 C 103.03 196.598 106.164 196.598 109.298 196.598 C 113.125 196.598 116.917 197.007 120.744 197.007 C 121.423 197.007 125.241 197.666 125.241 196.598" />
+    </svg>
+  `;
 
-  if (scrollActual >= alturaTotal - 10) {
-    eliicoptero.classList.add("visible");
-  } else {
-    eliicoptero.classList.remove("visible");
+  // 2. Inyectamos los estilos de animación necesarios automáticamente si no existen
+  if (!document.getElementById("estilo-eliicoptero")) {
+    const estiloAnimacion = document.createElement("style");
+    estiloAnimacion.id = "estilo-eliicoptero";
+    estiloAnimacion.textContent = `
+      .eliicoptero {
+        display: block; /* Aseguramos que sea un bloque */
+        /* Aumentamos el z-index para que esté por encima de cualquier capa en móviles */
+        z-index: 10000;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform: translateY(20px); /* Empieza un poco más abajo */
+      }
+      .eliicoptero.visible {
+        opacity: 1 !important;
+        transform: translateY(0);
+        pointer-events: auto; /* Para que se pueda hacer click si fuera necesario */
+      }
+      @media (max-width: 768px) {
+        .eliicoptero {
+          width: 20px !important; /* Aumentado para que sea muy obvio original 20 */
+          height: 20px !important; 
+          bottom: 1rem !important;
+          top: auto !important;
+          color: white !important; /* Forzamos color del trazo */
+          transform: none !important;
+        }
+        /* Posición específica para el index: abajo a la derecha */
+        .pagina-inicio .eliicoptero {
+          right: 1rem !important;
+          left: auto !important;
+        }
+        /* Posición específica para el menú: abajo a la izquierda */
+        .estilosMenu .eliicoptero {
+          left: 1rem !important;
+          right: auto !important;
+        }
+      }
+    `;
+    document.head.appendChild(estiloAnimacion);
   }
+
+  // 3. Vigilante para el scroll (sentinel)
+  const sentinel = document.createElement("div");
+  // Aseguramos que el centinela esté al final absoluto y sea detectable
+  sentinel.id = "sentinel-footer";
+  sentinel.style.cssText = "height: 1px; width: 1px; position: absolute; bottom: 0; pointer-events: none; opacity: 0;";
+  document.body.appendChild(sentinel);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          container.classList.add("visible");
+        } else {
+          container.classList.remove("visible");
+        }
+      });
+    },
+    {
+      /* Activamos el helicóptero 20px antes de llegar al final para que sea más fiable en móviles */
+      rootMargin: "0px 0px 20px 0px",
+      threshold: 0,
+    },
+  );
+
+  observer.observe(sentinel);
 });

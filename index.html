@@ -1,16 +1,21 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Metaetiquetas para SEO -->
+    <meta name="description" content="Tapería Valverde en Ourense. Cocina 100% sin gluten, especialidad en huevos rotos, arepas y postres caseros. Calle Lepanto 4." />
     <title>Valverde | Tapería</title>
 
+    <!-- Fuentes y Hojas de Estilo -->
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body>
+  <body class="pagina-inicio">
     <!-- ====== SEO INVISIBLE ====== -->
     <div class="sr-only">
       <h1>Valverde Tapería</h1>
@@ -21,15 +26,28 @@
 
     <!-- ====== HERO ====== -->
     <section class="pantallaPpal" aria-label="Sección principal">
+      <!-- Se implementará más adelante: Video de fondo con poster para carga rápida
+      <video class="video-fondo" autoplay muted playsinline poster="imagenes/fondo_ppal_02_01.png">
+        <source src="videos/intro8seg.mp4" type="video/mp4" />
+      </video> -->
+
+      <!-- Botón central para ir al menú -->
       <div class="rectangulo">
         <a href="menu.html" class="boton-menu">Ver menú</a>
       </div>
 
-      <p class="slogan">Libre de gluten, lleno de sabor</p>
+      <!-- Slogan que aparece/desaparece según el video -->
+      <p class="slogan video-activo">Libre de gluten, lleno de sabor</p>
+
+      <!-- Flecha animada indicando scroll hacia abajo -->
+      <svg class="flecha-scroll" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+      </svg>
     </section>
 
     <!-- ====== INFO ====== -->
-    <section class="pantalla1abajo" aria-label="Información">
+    <address class="pantalla1abajo" aria-label="Información de contacto">
+      <!-- Bloque 1: Dirección -->
       <div class="infoBloque">
         <span class="infoTitulo">
           <!-- Pin Dirección -->
@@ -45,6 +63,7 @@
         </span>
       </div>
 
+      <!-- Bloque 2: Horario -->
       <div class="infoBloque">
         <span class="infoTitulo">
           <!-- Reloj completo -->
@@ -56,11 +75,12 @@
           Horario
         </span>
         <span class="infoTexto">
-          Miércoles a Domingos<br />
+          Jueves a Domingos<br />
           20:00 – 01:30
         </span>
       </div>
 
+      <!-- Bloque 3: Contacto -->
       <div class="infoBloque">
         <span class="infoTitulo">
           <!-- Teléfono Contacto -->
@@ -83,33 +103,14 @@
           <a href="https://instagram.com/taperiavalverde" target="_blank" class="link">@taperiavalverde</a>
         </span>
       </div>
-    </section>
+    </address>
 
     <!-- ====== COSAS SECRETAS ====== -->
-    <svg class="eliicoptero" viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624"
-      />
-    </svg>
+    <!-- El eliicoptero se inyectará automáticamente desde eliicoptero.js -->
+    <div id="contenedor-eli" class="eliicoptero"></div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const infoBloque = document.querySelector(".pantalla1abajo");
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              infoBloque.classList.add("visible");
-            }
-          },
-          { threshold: 0.1 },
-        );
-        observer.observe(infoBloque);
-      });
-    </script>
-
+    <!-- Scripts de funcionalidad -->
     <script src="eliicoptero.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

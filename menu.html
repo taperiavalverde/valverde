@@ -1,27 +1,36 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Configuración básica y SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menú Valverde</title>
+
+    <!-- Favicon y Fuentes -->
+    <link rel="icon" href="logo-favicon.svg" type="image/svg+xml" />
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="menu.css" />
   </head>
 
   <body class="estilosMenu">
+    <!-- Fondo fijo detrás del contenido -->
     <div class="heroFondo"></div>
 
+    <!-- Encabezado con Logo SVG -->
     <header class="tituloarriba">
       <a href="index.html" class="logo">
         <svg class="logo-svg" viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" aria-label="Valverde">
-          <text x="0" y="0" dominant-baseline="text-before-edge" font-size="240">V</text>
-          <text x="170" y="23" dominant-baseline="text-before-edge" font-size="160">ALVERDE</text>
+          <text x="0" y="0" dominant-baseline="text-before-edge" font-size="240" fill="currentColor">V</text>
+          <text x="170" y="23" dominant-baseline="text-before-edge" font-size="160" fill="currentColor">ALVERDE</text>
         </svg>
       </a>
       <h1 class="sr-only">Menú de la tapería Valverde</h1>
     </header>
 
+    <!-- Barra de navegación anclada -->
     <nav class="barraNav">
       <a href="#entrantes">Entrantes</a>
       <a href="#principales">Principales</a>
@@ -29,171 +38,252 @@
       <a href="#vinos">Carta de vinos</a>
     </nav>
 
-    <!-- ENTRANTES -->
+    <!-- SECCIÓN: ENTRANTES -->
     <section id="entrantes" class="gruposPlatos">
       <h2 class="gruposPlatosMenu">Entrantes</h2>
 
       <div class="plato">
-        <span class="platosNombre">Patatas bravioli</span>
-        <span class="platosPrecio">5,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Patatas bravioli</span>
+          <span class="platosPrecio">5,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato01.png" alt="Patatas bravioli" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Tapa de lentejas "La especialidad"</span>
-        <span class="platosPrecio">4,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Tapa de lentejas "La especialidad"</span>
+          <span class="platosPrecio">3,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato02.png" alt="Lentejas" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Provoleta con tomate confitado</span>
-        <span class="platosPrecio">8,50 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Provoleta con tomate confitado</span>
+          <span class="platosPrecio">8,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato03.png" alt="Provoleta" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Gambas al ajillo</span>
-        <span class="platosPrecio">8,50 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Gambas al ajillo</span>
+          <span class="platosPrecio">8,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato04.png" alt="Gambas" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Rollitos de queso y tomate confitado</span>
-        <span class="platosPrecio">4,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Rollitos de queso y tomate confitado</span>
+          <span class="platosPrecio">4,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato05.png" alt="Rollitos queso" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Rollitos de pollo</span>
-        <span class="platosPrecio">8,50 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Rollitos de pollo</span>
+          <span class="platosPrecio">8,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato06.png" alt="Rollitos pollo" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Tostas de maíz</span>
-        <span class="platosExplic">Queso, pollo o carne mechada</span>
-        <span class="platosPrecio">6,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Tostas variadas</span>
+          <span class="platosPrecio">7,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato07.png" alt="Tostas" class="plato-img" loading="lazy" /> -->
       </div>
 
-
       <div class="plato">
-        <span class="platosNombre">Empanadillas</span>
-        <span class="platosPrecio">4,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Empanadillas</span>
+          <span class="platosPrecio">4,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato09.png" alt="Empanadillas" class="plato-img" loading="lazy" /> -->
       </div>
     </section>
 
-    <!-- PRINCIPALES -->
+    <!-- SECCIÓN: PRINCIPALES -->
     <section id="principales" class="gruposPlatos">
       <h2 class="gruposPlatosMenu">Principales</h2>
 
       <div class="plato">
-        <span class="platosNombre">Huevos rotos con picaña</span>
-        <span class="platosPrecio">11,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Huevos rotos con picaña</span>
+          <span class="platosPrecio">11,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato10.png" alt="Huevos picaña" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Huevos rotos con entrecot</span>
-        <span class="platosPrecio">12,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Huevos rotos con entrecot</span>
+          <span class="platosPrecio">12,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato11.png" alt="Huevos entrecot" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Huevos rotos vegetarianos de temporada</span>
-        <span class="platosPrecio">9,50 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Huevos rotos vegetarianos de temporada</span>
+          <span class="platosPrecio">9,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato12.png" alt="Huevos vegetarianos" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Arepas</span>
-        <span class="platosExplic">Relleno de queso, pollo o carne mechada</span>
-        <span class="platosPrecio">6,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Arepas</span>
+          <span class="platosExplic">Relleno de queso, pollo o carne mechada</span>
+          <span class="platosPrecio">6,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato13.png" alt="Arepas" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Arepas</span>
-        <span class="platosExplic">Relleno de entrecot o picaña</span>
-        <span class="platosPrecio">7,50 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Arepas</span>
+          <span class="platosExplic">Relleno de entrecot o picaña</span>
+          <span class="platosPrecio">7,50 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato14.png" alt="Arepas especiales" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Risotto de jamón y portobello</span>
-        <span class="platosPrecio">12,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Risotto de jamón y portobello</span>
+          <span class="platosPrecio">12,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato15.png" alt="Risotto" class="plato-img" loading="lazy" /> -->
       </div>
     </section>
 
+    <!-- SECCIÓN: POSTRES -->
     <section id="postres" class="gruposPlatos">
       <h2 class="gruposPlatosMenu">Postres</h2>
 
       <div class="plato">
-        <span class="platosNombre">Arroz con leche de la abuela</span>
-        <span class="platosPrecio">4,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Arroz con leche de la abuela</span>
+          <span class="platosPrecio">4,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato16.png" alt="Arroz con leche" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato">
-        <span class="platosNombre">Mousse de limón</span>
-        <span class="platosPrecio">4,00 €</span>
+        <div class="plato-info">
+          <span class="platosNombre">Mousse de chocolate</span>
+          <span class="platosPrecio">4,00 €</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato17.png" alt="Mousse" class="plato-img" loading="lazy" /> -->
       </div>
     </section>
 
+    <!-- SECCIÓN: VINOS -->
     <section id="vinos" class="gruposPlatos">
       <h2 class="gruposPlatosMenu">Vinos</h2>
 
       <!-- GODELLO -->
       <h3 class="subgrupoVino">Godello</h3>
-
       <div class="plato vino">
-        <span class="platosNombre">Joaquín Rebolledo</span>
-        <span class="platosPrecio">3,00€ · 18,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Joaquín Rebolledo</span>
+          <span class="platosPrecio">3,00€ · 18,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato18.png" alt="Vino Joaquín Rebolledo" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato vino">
-        <span class="platosNombre">Quinta do Buble</span>
-        <span class="platosPrecio">2,80€ · 16,50€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Quinta do Buble</span>
+          <span class="platosPrecio">3,00€ · 18,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato19.png" alt="Vino Quinta do Buble" class="plato-img" loading="lazy" /> -->
       </div>
 
       <!-- ALBARIÑO -->
       <h3 class="subgrupoVino">Albariño</h3>
-
       <div class="plato vino">
-        <span class="platosNombre">Torres Gauda</span>
-        <span class="platosPrecio">4,00€ · 25,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Pazo de Bouciña</span>
+          <span class="platosPrecio">3,20€ · 19,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato01.png" alt="Vino Pazo de Bouciña" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato vino">
-        <span class="platosNombre">Coral do Mar</span>
-        <span class="platosPrecio">3,00€ · 16,50€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Coral do Mar</span>
+          <span class="platosPrecio">3,00€ · 16,50€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato02.png" alt="Vino Coral do Mar" class="plato-img" loading="lazy" /> -->
       </div>
 
       <!-- MENCÍA -->
       <h3 class="subgrupoVino">Mencía</h3>
-
       <div class="plato vino">
-        <span class="platosNombre">Joaquín Rebolledo</span>
-        <span class="platosPrecio">3,00€ · 18,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Joaquín Rebolledo</span>
+          <span class="platosPrecio">3,00€ · 18,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato03.png" alt="Vino Joaquín Rebolledo Mencía" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato vino">
-        <span class="platosNombre">Finca os Cobatos</span>
-        <span class="platosPrecio">2,60€ · 15,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Peza do Rei</span>
+          <span class="platosPrecio">3,20€ · 19,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato04.png" alt="Vino Peza do Rei" class="plato-img" loading="lazy" /> -->
       </div>
 
       <!-- RIOJA -->
       <h3 class="subgrupoVino">Rioja</h3>
-
       <div class="plato vino">
-        <span class="platosNombre">Coto</span>
-        <span class="platosPrecio">2,80€ · 16,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Coto</span>
+          <span class="platosPrecio">2,80€ · 16,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato05.png" alt="Vino Coto" class="plato-img" loading="lazy" /> -->
       </div>
 
-      <!-- RIBERA -->
+      <!-- RIBERA DEL DUERO -->
       <h3 class="subgrupoVino">Ribera del Duero</h3>
-
       <div class="plato vino">
-        <span class="platosNombre">Protos</span>
-        <span class="platosPrecio">3,20€ · 18,50€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Protos</span>
+          <span class="platosPrecio">3,20€ · 19,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato06.png" alt="Vino Protos" class="plato-img" loading="lazy" /> -->
       </div>
 
       <div class="plato vino">
-        <span class="platosNombre">Acapela</span>
-        <span class="platosPrecio">2,80€ · 16,00€</span>
+        <div class="plato-info">
+          <span class="platosNombre">Acapela</span>
+          <span class="platosPrecio">2,80€ · 16,00€</span>
+        </div>
+        <!-- <img src="imagenes/menu/plato07.png" alt="Vino Acapela" class="plato-img" loading="lazy" /> -->
       </div>
     </section>
 
-    <svg class="eliicoptero" viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- SVG intacto -->
-    </svg>
+    <!-- Elemento decorativo SVG (Elicóptero) -->
+    <!-- El eliicoptero se inyectará automáticamente desde eliicoptero.js -->
+    <div id="contenedor-eli" class="eliicoptero"></div>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="btn-arriba" aria-label="Volver arriba">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 11l5-5 5 5M7 18l5-5 5 5" />
+      </svg>
+    </button>
+
+    <!-- Scripts -->
     <script src="eliicoptero.js"></script>
+    <!-- Script específico de la página de menú -->
+    <script src="menu.js" defer></script>
   </body>
 </html>

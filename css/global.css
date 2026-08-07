@@ -1,0 +1,88 @@
+/* global.css */
+:root {
+    --color-fondo: #264d2a;
+    --color-fondo-rgb: 38, 77, 42;
+    --color-fondo-cincuenta: rgba(38, 77, 42, 0.5);
+
+    /*
+    --color-ppal: #ffffff;
+    --color-sec: #e6e6e6;
+    --color-terciario: #000000;
+    --color-resalte: #dbb28e; /*Antes f3e5ab d08f3d */
+
+    /* Neutros armonizados */
+    --color-ppal: #f4f1ea; /* Blanco crema para textos */
+    --color-sec: #c2c5bb; /* Gris suave para textos secundarios */
+    --color-terciario: #151a16; /* Casi negro para footers o menús modales */
+
+    /* El acento (Cobre cálido) */
+    --color-resalte: #c9a66b; /*d98a53 */
+    --color-resalte-hover: #a88752; /*c27642 Un tono más oscuro para el efecto :hover en botones */
+
+    --color-dorado: #d4af37;
+
+    --color-negro: rgba(0, 0, 0);
+    --color-negro-25: rgba(0, 0, 0, 0.25);
+    --color-negro-3: rgba(0, 0, 0, 0.3);
+    --color-negro-5: rgba(0, 0, 0, 0.5);
+    --color-negro-6: rgba(0, 0, 0, 0.6);
+    --color-borde-link: rgba(255, 255, 255, 0.4);
+    --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.3) 50%, rgba(var(--color-fondo-rgb), 0.9) 85%, var(--color-fondo) 100%);
+    --degradado-doble: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 1) 0%, rgba(var(--color-fondo-rgb), 0) 50%, rgba(var(--color-fondo-rgb), 1) 100%);
+    --touch-padding: 12px;
+}
+
+/* ====== RESET BÁSICO ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: var(--color-ppal);
+    background-color: var(--color-fondo);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.link {
+    color: var(--color-sec);
+    border-bottom: 1px solid var(--color-borde-link);
+    padding-bottom: 1px;
+}
+
+.link:hover {
+    border-bottom-color: var(--color-ppal);
+}
+
+#eliicoptero {
+    color: var(--color-resalte);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

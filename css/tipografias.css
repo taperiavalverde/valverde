@@ -1,0 +1,123 @@
+/* tipografias.css 
+    - h1 para grandes títulos de sección y logotipo.
+    - h2 para eslóganes o subtítulos destacados.
+    - h3 títulos de bloque de contacto
+    - h4 para nombres de platos y 
+    - h5 para precios, descripciones cortas y detalles secundarios.
+    - p para texto fluido (descripciones largas).
+    - a y button para elementos interactivos con estilo propio.*/
+
+/* ---------- RESET ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- ESTILOS GLOBALES ---------- */
+body {
+    /* Sans-serif para el cuerpo, mejora la legibilidad */
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+a {
+    text-shadow: 2px 2px 1px var(--color-negro-5);
+}
+
+/* Títulos principales: Serif, sin mayúsculas forzadas */
+h1 {
+    font-family: "Cardo", serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Cardo", serif;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px var(--color-resalte);
+}
+
+/* Sección contacto */
+h3 {
+    font-family: "Cardo", serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* Nombres de platos */
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* Precios y etiquetas: Sans-serif, mayúsculas, amplio espaciado */
+h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 70;
+}
+
+/* Descripciones largas: Sans-serif limpia */
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.95rem, 3vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.7; /* Mayor interlineado = más elegancia */
+}
+
+/* Elementos interactivos */
+a {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.5 rem, 3.5vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    /*border: 1px solid #2c2c2c; /* Borde fino para botones premium */
+    background: transparent;
+    /*padding: 0.8em 2em; /* Espacio de respiración */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*button:hover {
+    background: #2c2c2c;
+    color: #fff;
+}*/

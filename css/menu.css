@@ -34,6 +34,7 @@ body.estilosMenu {
     height: auto;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(2px 2px 1px var(--color-negro-5));
 }
 
 .barraNav {

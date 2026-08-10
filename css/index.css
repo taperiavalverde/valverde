@@ -32,7 +32,7 @@
     border: 0.25px solid var(--color-resalte);
 
     box-shadow:
-        0 6px 14px var(--color-negro-6),
+        0 0px 14px var(--color-negro),
         0 0 0 1px var(--color-ppal);
     transition: transform 0.2s ease;
 }

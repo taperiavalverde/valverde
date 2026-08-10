@@ -174,4 +174,8 @@
     .boton-menu {
         padding: 0.8rem 1.6rem;
     }
+
+    .boton-abajo {
+        bottom: 7vh; /* Ajusta este valor según tu preferencia */
+    }
 }

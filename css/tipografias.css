@@ -27,9 +27,12 @@ body {
 }
 
 h1,
-h2,
-a {
+h2 {
     text-shadow: 2px 2px 1px var(--color-negro-5);
+}
+
+a {
+    text-shadow: 1px 1px 1px var(--color-negro-5);
 }
 
 /* Títulos principales: Serif, sin mayúsculas forzadas */

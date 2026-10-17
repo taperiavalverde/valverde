@@ -18,3 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
         infoBloque.scrollIntoView({ behavior: "smooth" });
     });
 });
+
+window.addEventListener("scroll", () => {
+    const badge = document.getElementById("rg26-circle-r-ribbon");
+    if (window.scrollY > 50) {
+        badge.classList.add("mostrar");
+    } else {
+        badge.classList.remove("mostrar");
+    }
+});

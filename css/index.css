@@ -30,7 +30,6 @@
     color: var(--color-ppal);
     border-radius: 12px;
     border: 0.25px solid var(--color-resalte);
-
     box-shadow:
         0 0px 14px var(--color-negro),
         0 0 0 1px var(--color-ppal);
@@ -140,6 +139,24 @@
     text-transform: inherit;
 }
 
+#rg26-circle-r-ribbon {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 2rem !important;
+    margin: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
+
+#rg26-circle-r-ribbon.mostrar {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
 @media (max-width: 768px) {
     .slogan br {
         display: inline;
@@ -177,5 +194,13 @@
 
     .boton-abajo {
         bottom: 7vh; /* Ajusta este valor según tu preferencia */
+    }
+
+    #rg26-circle-r-ribbon {
+        top: auto !important;
+        bottom: 2rem !important;
+        left: 2rem !important;
+        transform: scale(0.6) !important;
+        transform-origin: bottom left !important;
     }
 }

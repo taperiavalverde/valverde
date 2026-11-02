@@ -1,0 +1,1335 @@
+﻿
+ESTRUCTURA DE ARCHIVOS Y CARPETAS 
+================================== 
+Listado de rutas de carpetas
+El n�mero de serie del volumen es 04AD-D726
+C:.
+|   001-generar.bat
+|   codigo-completo.txt
+|   index.html
+|   menu.html
+|   
++---css
+|       global.css
+|       index.css
+|       menu.css
+|       tipografias.css
+|       
++---imagenes
+|       fondo-menu-doble.webp
+|       fondo-ppal.webp
+|       
+\---js
+        eliicoptero.js
+        index.js
+        menu.js
+        
+ 
+CONTENIDO DE ARCHIVOS 
+===================== 
+ 
+--- ARCHIVO: index.html --- 
+<!-- index.html -->
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Valverde | Tapería</title>
+        <meta name="description" content="Tapería Valverde en Ourense. Cocina 100% sin gluten, especialidad en huevos rotos, arepas y postres caseros. Calle Lepanto 4." />
+
+        <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/tipografias.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link href="https://awards.infcdn.net/2026_new/r_gold.css" rel="stylesheet" />
+    </head>
+
+    <body class="pagina-inicio">
+        <!-- SEO oculto para lectores de pantalla -->
+        <div class="sr-only">
+            <h1>Valverde Tapería</h1>
+            <h2>Tapería sin gluten en Ourense</h2>
+            <p>Calle Lepanto 4, Ourense</p>
+            <p>Todo sin gluten</p>
+        </div>
+
+        <main>
+            <!-- HERO -->
+            <section class="pantallaPpal" aria-label="Sección principal">
+                <div class="rectangulo">
+                    <a href="menu.html" class="boton-menu">Ver menú</a>
+                </div>
+
+                <h2 class="slogan">Libre de gluten, <br />lleno de sabor</h2>
+
+                <button class="boton-abajo" aria-label="Desplazarse hacia abajo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180)">
+                        <path d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19" />
+                        <path d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11" />
+                    </svg>
+                </button>
+            </section>
+
+            <div
+                id="rg26-b-gold"
+                class="rg26-rg-award-lang-es_ES"
+                onclick="
+                    if (event.target.nodeName.toLowerCase() != 'a') {
+                        window.open(this.querySelector('.rg26-b-gold_r-link').href);
+                        return 0;
+                    }
+                "
+            >
+                <a href="https://es.restaurantguru.com/Taperia-Valverde-Ourense" class="rg26-b-gold_r-link" target="_blank">Tapería Valverde</a>
+                <p class="rg26-b-gold_center">Recomendado</p>
+                <a href="https://restaurantguru.com" class="rg26-b-gold__link" target="_blank">Restaurant Guru</a>
+                <p class="rg26-b-gold_year">2026</p>
+            </div>
+
+            <!-- INFORMACIÓN DE DIRECCIÓN -->
+            <address class="pantalla-abajo" aria-label="Información de contacto">
+                <div class="infoBloque">
+                    <h3 class="info-titulo">
+                        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z" />
+                        </svg>
+                        Dirección
+                    </h3>
+                    <p class="infoTexto">
+                        Calle Lepanto 4<br />
+                        Ourense<br />
+                        <a href="https://www.google.com/maps?q=Calle+Lepanto+4" class="link" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+                    </p>
+                </div>
+
+                <!-- INFORMACIÓN DE HORARIO -->
+                <div class="infoBloque">
+                    <h3 class="info-titulo">
+                        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <line x1="12" y1="12" x2="12" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <line x1="12" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Horario
+                    </h3>
+                    <p class="infoTexto">
+                        Jueves a Domingos<br />
+                        20:00 – 01:30
+                    </p>
+                </div>
+
+                <!-- INFORMACIÓN DE CONTACTO -->
+                <div class="infoBloque">
+                    <h3 class="info-titulo">
+                        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.2.48 2.5.74 3.82.74a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.32.26 2.62.74 3.82a1 1 0 0 1-.21 1.11l-2.2 2.2z" />
+                        </svg>
+                        Contacto
+                    </h3>
+                    <p class="infoTexto">
+                        <a href="tel:+34633340129" class="link"> 633 34 01 29</a><br />
+
+                        <!-- icono-contacto WhatsApp -->
+                        <svg class="icono-contacto" viewBox="0 0 24 24" aria-label="WhatsApp">
+                            <path
+                                fill="currentColor"
+                                d="M12.04 2C6.5 2 2 6.5 2 12.04c0 1.76.46 3.47 1.32 4.98L2 22l5.13-1.34A9.973 9.973 0 0 0 12.04 22c5.54 0 10.04-4.5 10.04-10.04C22.08 6.5 17.58 2 12.04 2zm5.46 14.5c-.23.65-1.35 1.25-1.9 1.34-.51.08-1.18.23-3.79-.79-3.15-1.22-5.18-4.46-5.34-4.67-.16-.21-1.27-1.7-1.27-3.23s.8-2.28 1.08-2.58c.28-.31.62-.39.83-.39s.42-.01.61.01c.21.02.48-.08.74.55.27.65.9 2.22.98 2.38.08.16.14.34.03.55-.11.21-.17.34-.33.53-.16.18-.34.39-.48.53-.16.16-.33.34-.14.67.18.32.82 1.36 1.76 2.2 1.21 1.08 2.22 1.41 2.54 1.56.32.16.51.13.7-.09.19-.22.82-.95 1.04-1.28.22-.32.44-.27.73-.16.29.11 1.84.87 2.15 1.03.31.16.52.24.59.38.07.14.07.82-.16 1.47z"
+                            />
+                        </svg>
+                        <a href="https://wa.me/34633340129" class="link">Enviar mensaje</a><br />
+
+                        <!-- icono-contacto Instagram -->
+                        <svg class="icono-contacto" viewBox="0 0 24 24" aria-label="Instagram">
+                            <path
+                                fill="currentColor"
+                                d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.15-3.23 1.66-4.77 4.92-4.92C8.42 2.17 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.63 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.63-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm3.96-11.41a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"
+                            />
+                        </svg>
+                        <a href="https://instagram.com/taperiavalverde" class="link" target="_blank" rel="noopener noreferrer">@taperiavalverde</a><br />
+                        <!-- icono-contacto Correo -->
+                        <svg class="icono-contacto" viewBox="0 0 24 24" aria-label="Correo">
+                            <path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+                        </svg>
+                        <a href="mailto:taperiavalverde@gmail.com" class="link">taperiavalverde@gmail.com</a>
+                    </p>
+                </div>
+            </address>
+        </main>
+
+        <div id="eliicoptero" data-distancia-derecha="2rem" data-distancia-abajo="1.5rem" data-tamano="40" data-color="currentColor"></div>
+
+        <!-- Scripts al final -->
+        <script src="js/eliicoptero.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
+ 
+--- ARCHIVO: menu.html --- 
+<!-- menu.html -->
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menú Valverde</title>
+        <meta name="description" content="Carta de la tapería Valverde en Ourense. Cocina 100% sin gluten." />
+
+        <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/tipografias.css" />
+        <link rel="stylesheet" href="css/menu.css" />
+    </head>
+
+    <body class="estilosMenu">
+        <div class="fondo-contenedor">
+            <img src="imagenes/fondo-menu-doble.webp" alt="" class="fondo-imagen" />
+        </div>
+        <!-- Encabezado con Logo clickeable (solo SVG, sin texto) -->
+        <header class="tituloarriba">
+            <a href="index.html" class="logo" aria-label="Valverde - Ir a inicio">
+                <svg class="logo-svg" viewBox="0 0 943 177" text-shadow: 2px 2px 1px var(--color-negro-5)>
+                    <path
+                        id="Valverde"
+                        fill="currentColor"
+                        stroke-width="1"
+                        d="M 3.00,2.00
+           C 3.00,2.00 3.00,8.00 3.00,8.00
+             22.79,9.66 25.53,24.37 31.80,40.00
+             31.80,40.00 69.80,132.00 69.80,132.00
+             69.80,132.00 81.80,161.00 81.80,161.00
+             84.44,167.54 84.79,171.97 93.00,171.97
+             101.98,171.97 102.47,167.07 105.05,160.00
+             105.05,160.00 115.05,133.00 115.05,133.00
+             115.05,133.00 150.31,38.00 150.31,38.00
+             155.52,23.36 160.65,8.42 179.00,8.00
+             179.00,8.00 179.00,2.00 179.00,2.00
+             179.00,2.00 126.00,2.00 126.00,2.00
+             119.99,2.01 117.57,1.24 117.00,8.00
+             124.50,8.34 137.71,9.69 139.25,19.00
+             139.73,21.89 137.65,27.14 136.66,30.00
+             136.66,30.00 128.05,53.00 128.05,53.00
+             128.05,53.00 108.95,105.00 108.95,105.00
+             108.95,105.00 98.00,136.00 98.00,136.00
+             98.00,136.00 82.60,100.00 82.60,100.00
+             82.60,100.00 62.40,51.00 62.40,51.00
+             62.40,51.00 53.80,30.00 53.80,30.00
+             52.51,26.76 50.54,22.54 51.33,19.00
+             53.37,9.76 67.27,8.17 75.00,8.00
+             75.00,8.00 75.00,2.00 75.00,2.00
+             75.00,2.00 3.00,2.00 3.00,2.00 Z
+           M 611.00,3.00
+           C 611.00,3.00 611.00,6.00 611.00,6.00
+             623.69,6.12 626.98,10.94 627.00,23.00
+             627.00,23.00 627.00,95.00 627.00,95.00
+             626.94,107.11 621.81,108.54 611.00,110.00
+             613.49,113.72 615.85,112.99 620.00,113.00
+             620.00,113.00 661.00,113.00 661.00,113.00
+             661.00,113.00 661.00,110.00 661.00,110.00
+             656.07,109.35 647.84,108.69 644.51,104.78
+             642.11,101.95 642.05,98.50 642.00,95.00
+             642.00,95.00 642.00,70.00 642.00,70.00
+             642.04,67.99 641.96,65.15 643.60,63.69
+             645.23,62.23 655.41,62.83 657.99,63.06
+             664.91,63.67 668.91,73.71 672.34,79.00
+             681.27,92.73 688.61,109.80 706.00,113.98
+             710.78,115.10 713.26,115.34 718.00,113.98
+             718.00,113.98 718.00,112.00 718.00,112.00
+             704.86,106.13 702.06,99.36 694.95,88.00
+             694.95,88.00 677.00,59.00 677.00,59.00
+             683.29,56.19 689.20,52.22 692.59,46.00
+             694.83,41.88 695.00,38.55 695.00,34.00
+             695.00,21.24 689.53,11.75 678.00,5.82
+             668.52,0.94 662.17,2.00 652.00,2.00
+             652.00,2.00 632.00,2.00 632.00,2.00
+             632.00,2.00 611.00,3.00 611.00,3.00 Z
+           M 723.00,3.00
+           C 723.00,3.00 723.00,6.00 723.00,6.00
+             734.96,6.04 738.98,8.68 739.00,21.00
+             739.00,21.00 739.00,95.00 739.00,95.00
+             738.99,100.31 739.37,104.65 733.96,107.55
+             728.96,110.22 725.18,107.43 723.00,113.00
+             723.00,113.00 766.00,113.00 766.00,113.00
+             784.66,113.00 799.40,113.56 816.00,102.91
+             852.15,79.73 850.77,24.87 810.00,7.34
+             803.21,4.42 786.56,2.04 779.00,2.00
+             779.00,2.00 738.00,2.00 738.00,2.00
+             738.00,2.00 723.00,3.00 723.00,3.00 Z
+           M 227.00,3.00
+           C 227.19,10.62 221.60,23.21 219.00,31.00
+             219.00,31.00 199.00,89.00 199.00,89.00
+             195.17,100.47 193.47,108.06 180.00,110.00
+             180.00,110.00 180.00,113.00 180.00,113.00
+             180.00,113.00 222.00,113.00 222.00,113.00
+             222.00,113.00 222.00,109.77 222.00,109.77
+             219.51,109.98 217.48,110.00 215.00,109.77
+             213.47,109.24 211.42,108.68 210.02,108.03
+             201.91,104.28 205.05,99.34 207.31,93.00
+             207.31,93.00 210.33,84.00 210.33,84.00
+             211.96,79.12 214.72,67.48 219.11,65.02
+             220.91,64.01 223.00,64.04 225.00,64.00
+             229.90,63.91 245.21,63.03 248.61,65.74
+             251.26,67.85 252.60,72.84 253.67,76.00
+             253.67,76.00 260.34,95.00 260.34,95.00
+             261.42,98.14 263.32,101.65 261.22,104.79
+             258.21,109.30 248.98,109.89 244.00,110.00
+             244.00,110.00 244.00,113.00 244.00,113.00
+             244.00,113.00 293.00,113.00 293.00,113.00
+             291.26,108.52 288.81,109.44 285.02,107.01
+             281.70,104.88 280.02,102.48 278.32,99.00
+             278.32,99.00 261.31,52.00 261.31,52.00
+             261.31,52.00 244.00,3.00 244.00,3.00
+             244.00,3.00 227.00,3.00 227.00,3.00 Z
+           M 298.00,3.00
+           C 298.00,3.00 298.00,6.00 298.00,6.00
+             310.27,6.11 315.98,9.13 316.00,22.00
+             316.00,22.00 316.00,93.00 316.00,93.00
+             315.94,106.40 309.54,109.72 297.00,110.00
+             297.00,110.00 297.00,113.00 297.00,113.00
+             297.00,113.00 370.00,113.00 370.00,113.00
+             370.00,113.00 377.37,112.01 377.37,112.01
+             377.37,112.01 381.75,105.00 381.75,105.00
+             381.75,105.00 390.00,87.00 390.00,87.00
+             382.38,90.68 380.54,98.42 373.00,103.00
+             366.07,107.21 352.25,106.01 344.00,106.00
+             340.75,105.99 336.90,106.28 334.15,104.26
+             332.57,103.11 331.79,101.85 331.10,99.98
+             331.10,99.98 331.10,77.00 331.10,77.00
+             331.10,77.00 331.10,29.00 331.10,29.00
+             331.00,24.59 330.13,13.65 332.74,10.39
+             336.42,5.80 346.60,6.00 352.00,6.00
+             352.00,6.00 352.00,3.00 352.00,3.00
+             352.00,3.00 298.00,3.00 298.00,3.00 Z
+           M 391.00,3.00
+           C 391.00,3.00 391.00,6.00 391.00,6.00
+             405.19,8.23 405.81,16.58 410.72,28.00
+             410.72,28.00 435.42,88.00 435.42,88.00
+             435.42,88.00 443.72,108.00 443.72,108.00
+             445.36,111.72 446.26,114.89 451.01,114.89
+             455.78,114.89 457.03,111.88 458.57,108.00
+             458.57,108.00 466.00,88.00 466.00,88.00
+             466.00,88.00 488.95,26.00 488.95,26.00
+             492.52,16.22 496.16,7.11 508.00,6.00
+             508.00,6.00 508.00,3.00 508.00,3.00
+             508.00,3.00 467.00,3.00 467.00,3.00
+             471.10,9.31 479.45,4.83 481.55,13.04
+             482.68,17.42 477.02,30.20 475.31,35.00
+             475.31,35.00 454.00,92.00 454.00,92.00
+             454.00,92.00 430.20,35.00 430.20,35.00
+             428.56,30.92 422.29,17.54 423.06,14.00
+             424.53,7.26 433.41,6.26 439.00,6.00
+             439.00,6.00 439.00,3.00 439.00,3.00
+             439.00,3.00 391.00,3.00 391.00,3.00 Z
+           M 515.00,3.00
+           C 515.00,3.00 515.00,6.00 515.00,6.00
+             526.74,6.99 530.98,10.10 531.00,22.00
+             531.00,22.00 531.00,95.00 531.00,95.00
+             530.99,101.35 530.22,106.60 523.00,108.57
+             518.01,109.93 512.33,107.02 510.00,113.00
+             510.00,113.00 598.00,113.00 598.00,113.00
+             598.00,113.00 601.00,85.00 601.00,85.00
+             596.14,86.76 597.38,89.52 595.52,94.00
+             593.89,97.93 590.80,101.84 587.00,103.84
+             581.50,106.74 567.57,106.07 561.00,106.00
+             557.64,105.96 551.93,105.70 549.31,103.42
+             546.62,101.06 547.01,97.24 547.00,94.00
+             547.00,94.00 547.00,60.00 547.00,60.00
+             547.00,60.00 572.00,60.00 572.00,60.00
+             574.90,60.05 577.33,60.08 579.79,61.89
+             583.55,64.65 584.39,69.69 585.00,74.00
+             585.00,74.00 588.00,74.00 588.00,74.00
+             588.00,74.00 588.00,40.00 588.00,40.00
+             588.00,40.00 585.00,40.00 585.00,40.00
+             584.36,44.04 583.50,47.76 579.89,50.26
+             577.18,52.14 574.13,51.98 571.00,52.00
+             571.00,52.00 547.00,52.00 547.00,52.00
+             547.00,52.00 547.00,10.00 547.00,10.00
+             547.00,10.00 574.00,10.00 574.00,10.00
+             577.75,10.05 580.80,10.13 583.95,12.51
+             591.94,18.56 586.82,26.41 594.00,29.00
+             594.00,29.00 592.00,3.00 592.00,3.00
+             592.00,3.00 515.00,3.00 515.00,3.00 Z
+           M 855.00,3.00
+           C 855.00,3.00 855.00,6.00 855.00,6.00
+             866.74,6.99 870.98,10.10 871.00,22.00
+             871.00,22.00 871.00,95.00 871.00,95.00
+             870.99,101.35 870.22,106.60 863.00,108.57
+             858.01,109.93 852.33,107.02 850.00,113.00
+             850.00,113.00 938.00,113.00 938.00,113.00
+             938.00,113.00 941.00,85.00 941.00,85.00
+             936.14,86.76 937.38,89.52 935.52,94.00
+             933.89,97.93 930.80,101.84 927.00,103.84
+             921.50,106.74 907.57,106.07 901.00,106.00
+             897.64,105.96 891.93,105.70 889.31,103.42
+             886.62,101.06 887.01,97.24 887.00,94.00
+             887.00,94.00 887.00,60.00 887.00,60.00
+             887.00,60.00 912.00,60.00 912.00,60.00
+             914.90,60.05 917.33,60.08 919.79,61.89
+             923.55,64.65 924.39,69.69 925.00,74.00
+             925.00,74.00 928.00,74.00 928.00,74.00
+             928.00,74.00 928.00,40.00 928.00,40.00
+             928.00,40.00 925.00,40.00 925.00,40.00
+             924.36,44.04 923.50,47.76 919.89,50.26
+             917.18,52.14 914.13,51.98 911.00,52.00
+             911.00,52.00 887.00,52.00 887.00,52.00
+             887.00,52.00 887.00,10.00 887.00,10.00
+             887.00,10.00 914.00,10.00 914.00,10.00
+             917.75,10.05 920.80,10.13 923.95,12.51
+             931.94,18.56 926.82,26.41 934.00,29.00
+             934.00,29.00 932.00,3.00 932.00,3.00
+             932.00,3.00 855.00,3.00 855.00,3.00 Z
+           M 642.00,6.00
+           C 653.98,6.00 665.98,4.44 674.47,15.04
+             681.98,24.42 681.85,44.40 672.90,52.79
+             667.96,57.41 660.56,58.92 654.00,59.00
+             651.17,59.03 645.68,59.48 643.60,57.40
+             641.31,55.11 642.00,47.26 642.00,44.00
+             642.00,44.00 642.00,6.00 642.00,6.00 Z
+           M 756.31,6.60
+           C 760.88,5.49 767.18,6.00 772.00,6.09
+             772.00,6.09 786.00,6.09 786.00,6.09
+             798.15,7.48 809.22,15.24 816.21,25.00
+             829.54,43.63 828.33,78.37 811.91,94.91
+             802.00,104.90 788.77,108.98 775.00,109.00
+             775.00,109.00 766.00,109.00 766.00,109.00
+             756.00,108.95 754.02,106.83 754.00,97.00
+             754.00,97.00 754.00,32.00 754.00,32.00
+             754.00,28.32 753.56,10.42 754.60,8.31
+             755.34,6.80 755.56,7.24 756.31,6.60 Z
+           M 233.00,19.00
+           C 233.00,19.00 243.00,45.00 243.00,45.00
+             243.00,45.00 244.88,54.40 244.88,54.40
+             244.88,54.40 239.00,56.00 239.00,56.00
+             239.00,56.00 220.00,55.00 220.00,55.00
+             220.00,55.00 233.00,19.00 233.00,19.00 Z"
+                    />
+                </svg>
+            </a>
+            <h2 class="sr-only">Menú de la tapería Valverde</h2>
+        </header>
+
+        <main>
+            <!-- Barra de navegación -->
+            <nav class="barraNav">
+                <a href="#entrantes">Entrantes</a>
+                <a href="#principales">Principales</a>
+                <a href="#postres">Postres</a>
+                <a href="#vinos">Carta de vinos</a>
+            </nav>
+
+            <!-- SECCIÓN: ENTRANTES -->
+            <section id="entrantes" class="seccion-menu">
+                <h2 class="seccion-titulo">Entrantes</h2>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Patatas bravioli</h4>
+                        <h5 class="plato-precio">5,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Tapa de lentejas <br />"La especialidad"</h4>
+                        <h5 class="plato-precio">3,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Provoleta <br />con tomate confitado</h4>
+                        <h5 class="plato-precio">8,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Gambas al ajillo</h4>
+                        <h5 class="plato-precio">8,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Rollitos de queso <br />y tomate confitado</h4>
+                        <h5 class="plato-precio">4,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Rollitos de pollo</h4>
+                        <h5 class="plato-precio">8,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Tostas variadas</h4>
+                        <h5 class="plato-precio">7,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Empanadillas</h4>
+                        <h5 class="plato-precio">4,00 €</h5>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: PRINCIPALES -->
+            <section id="principales" class="seccion-menu">
+                <h2 class="seccion-titulo">Principales</h2>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Arepas</h4>
+                        <p class="plato-relleno">Relleno de queso, pollo o carne mechada</p>
+                        <h5 class="plato-precio">6,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Arepas</h4>
+                        <p class="plato-relleno">Relleno de entrecot o picaña</p>
+                        <h5 class="plato-precio">7,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Huevos rotos <br />con picaña</h4>
+                        <h5 class="plato-precio">11,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Huevos rotos <br />con entrecot</h4>
+                        <h5 class="plato-precio">12,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Huevos rotos <br />vegetarianos de temporada</h4>
+                        <h5 class="plato-precio">9,50 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Risotto de <br />jamón y portobello</h4>
+                        <h5 class="plato-precio">12,00 €</h5>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: POSTRES -->
+            <section id="postres" class="seccion-menu">
+                <h2 class="seccion-titulo">Postres</h2>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Arroz con leche <br />de la abuela</h4>
+                        <h5 class="plato-precio">4,00 €</h5>
+                    </div>
+                </div>
+                <div class="plato">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Mousse de chocolate</h4>
+                        <h5 class="plato-precio">4,00 €</h5>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: VINOS -->
+            <section id="vinos" class="seccion-menu">
+                <h2 class="seccion-titulo">Vinos</h2>
+
+                <h4 class="subgrupo-vino">Godello</h4>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Joaquín Rebolledo</h4>
+                        <h5 class="plato-precio">3,00€ · 18,00€</h5>
+                    </div>
+                </div>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Quinta do Buble</h4>
+                        <h5 class="plato-precio">3,00€ · 18,00€</h5>
+                    </div>
+                </div>
+
+                <h4 class="subgrupo-vino">Albariño</h4>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Pazo de Bouciña</h4>
+                        <h5 class="plato-precio">3,20€ · 19,00€</h5>
+                    </div>
+                </div>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Coral do Mar</h4>
+                        <h5 class="plato-precio">3,00€ · 16,50€</h5>
+                    </div>
+                </div>
+
+                <h4 class="subgrupo-vino">Mencía</h4>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Joaquín Rebolledo</h4>
+                        <h5 class="plato-precio">3,00€ · 18,00€</h5>
+                    </div>
+                </div>
+
+                <h4 class="subgrupo-vino">Rioja</h4>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Coto</h4>
+                        <h5 class="plato-precio">2,80€ · 16,00€</h5>
+                    </div>
+                </div>
+
+                <h4 class="subgrupo-vino">Ribera del Duero</h4>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Protos</h4>
+                        <h5 class="plato-precio">3,20€ · 19,00€</h5>
+                    </div>
+                </div>
+                <div class="plato vino">
+                    <div class="plato-info">
+                        <h4 class="plato-nombre">Acapela</h4>
+                        <h5 class="plato-precio">2,80€ · 16,00€</h5>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Botón volver arriba width="24" height="24" -->
+        <button class="boton-arriba" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 19L11.2929 12.7071C11.6834 12.3166 12.3166 12.3166 12.7071 12.7071L19 19" />
+                <path d="M5 11L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19 11" />
+            </svg>
+        </button>
+
+        <div id="eliicoptero" data-distancia-derecha="85%" data-distancia-abajo="1.5rem" data-tamano="40" data-color="currentColor"></div>
+
+        <script src="js/eliicoptero.js"></script>
+        <script src="js/menu.js" defer></script>
+    </body>
+</html>
+ 
+--- ARCHIVO: css\global.css --- 
+/* global.css */
+:root {
+    --color-fondo: #264d2a;
+    --color-fondo-rgb: 38, 77, 42;
+    --color-fondo-cincuenta: rgba(38, 77, 42, 0.5);
+
+    /*
+    --color-ppal: #ffffff;
+    --color-sec: #e6e6e6;
+    --color-terciario: #000000;
+    --color-resalte: #dbb28e; /*Antes f3e5ab d08f3d */
+
+    /* Neutros armonizados */
+    --color-ppal: #f4f1ea; /* Blanco crema para textos */
+    --color-sec: #c2c5bb; /* Gris suave para textos secundarios */
+    --color-terciario: #151a16; /* Casi negro para footers o menús modales */
+
+    /* El acento (Cobre cálido) */
+    --color-resalte: #c9a66b; /*d98a53 */
+    --color-resalte-hover: #a88752; /*c27642 Un tono más oscuro para el efecto :hover en botones */
+
+    --color-dorado: #d4af37;
+
+    --color-negro: rgba(0, 0, 0);
+    --color-negro-25: rgba(0, 0, 0, 0.25);
+    --color-negro-3: rgba(0, 0, 0, 0.3);
+    --color-negro-5: rgba(0, 0, 0, 0.5);
+    --color-negro-6: rgba(0, 0, 0, 0.6);
+    --color-borde-link: rgba(255, 255, 255, 0.4);
+    --degradado: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 0) 0%, rgba(var(--color-fondo-rgb), 0.3) 50%, rgba(var(--color-fondo-rgb), 0.9) 85%, var(--color-fondo) 100%);
+    --degradado-doble: linear-gradient(to bottom, rgba(var(--color-fondo-rgb), 1) 0%, rgba(var(--color-fondo-rgb), 0) 50%, rgba(var(--color-fondo-rgb), 1) 100%);
+    --touch-padding: 12px;
+}
+
+/* ====== RESET BÁSICO ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: var(--color-ppal);
+    background-color: var(--color-fondo);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.link {
+    color: var(--color-sec);
+    border-bottom: 1px solid var(--color-borde-link);
+    padding-bottom: 1px;
+}
+
+.link:hover {
+    border-bottom-color: var(--color-ppal);
+}
+
+#eliicoptero {
+    color: var(--color-resalte);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+ 
+--- ARCHIVO: css\index.css --- 
+/* index.css */
+
+.pantallaPpal {
+    position: relative;
+    height: 100vh;
+    background-image: url("../imagenes/fondo-ppal.webp");
+    background-size: cover;
+    background-position: center center;
+}
+
+.pantallaPpal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--degradado);
+    z-index: 1;
+}
+
+.rectangulo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding-top: 45vh;
+    transition: padding-top 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.boton-menu {
+    padding: 1rem 2.5rem;
+    color: var(--color-ppal);
+    border-radius: 12px;
+    border: 0.25px solid var(--color-resalte);
+    box-shadow:
+        0 0px 14px var(--color-negro),
+        0 0 0 1px var(--color-ppal);
+    transition: transform 0.2s ease;
+}
+
+.boton-menu:hover {
+    transform: scale(1.05);
+}
+
+.slogan {
+    position: absolute;
+    text-align: center;
+    bottom: 20vh;
+    width: 100%;
+    z-index: 2;
+    transition:
+        opacity 2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slogan br {
+    display: none;
+}
+
+.boton-abajo {
+    position: absolute;
+    border: none;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-ppal);
+    width: 45px;
+    height: 45px;
+    animation: bote 2s infinite;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@keyframes bote {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.pantalla-abajo {
+    margin: 3rem auto;
+    padding: 3.5rem 3rem;
+    max-width: 1100px;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.infoBloque {
+    text-align: center;
+}
+
+.icono,
+.icono-contacto {
+    vertical-align: middle;
+    color: var(--color-sec);
+}
+
+.icono {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.icono-contacto {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.info-titulo {
+    color: var(--color-terciario);
+    margin-bottom: 0.6rem;
+    white-space: nowrap; /* Evita que el texto caiga a la siguiente línea */
+}
+
+.infoTexto {
+    color: var(--color-sec);
+    white-space: nowrap; /* Evita que el texto caiga a la siguiente línea */
+}
+
+.infoTexto a {
+    font-size: inherit;
+    text-transform: inherit;
+}
+
+#rg26-b-gold {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 2rem !important;
+    margin: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
+
+#rg26-b-gold.mostrar {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+@media (max-width: 768px) {
+    .slogan br {
+        display: inline;
+    }
+
+    .pantalla-abajo {
+        margin-top: 0.5rem;
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.6s ease,
+            transform 0.6s ease;
+    }
+
+    .pantalla-abajo.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .infoBloque {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .slogan {
+        bottom: 22vh;
+    }
+
+    .boton-menu {
+        padding: 0.8rem 1.6rem;
+    }
+
+    .boton-abajo {
+        bottom: 7vh; /* Ajusta este valor según tu preferencia */
+    }
+}
+ 
+--- ARCHIVO: css\menu.css --- 
+/* menu.css */
+body.estilosMenu {
+    margin: 0;
+    color: var(--color-sec);
+    background-color: var(--color-fondo);
+    position: relative; /* Necesario para posicionar la imagen de fondo */
+}
+
+.fondo-contenedor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 400vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.fondo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.logo-svg {
+    padding-top: 40px;
+    color: var(--color-ppal);
+    stroke: var(--color-resalte);
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(2px 2px 1px var(--color-negro-5));
+}
+
+.barraNav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--degradado-doble);
+    border-top: 0.5px solid var(--color-resalte);
+    border-bottom: 1px solid var(--color-resalte);
+    display: flex;
+    justify-content: center;
+}
+
+.barraNav a {
+    margin: 0 1rem;
+    padding: var(--touch-padding);
+}
+
+.barraNav a:hover,
+.barraNav a.activo {
+    color: var(--color-resalte);
+}
+
+.seccion-menu {
+    background-color: var(--color-fondo-cincuenta);
+    border: 0.25px solid var(--color-resalte);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.seccion-titulo {
+    text-align: center;
+    color: var(--color-ppal);
+    margin-bottom: 2rem;
+}
+
+.plato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.plato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.plato-nombre {
+    color: var(--color-sec);
+}
+
+.plato-nombre br {
+    display: none;
+}
+
+.plato-precio {
+    color: var(--color-resalte);
+}
+
+.plato-relleno {
+    line-height: 1.2;
+}
+
+.page-end {
+    height: 30vh;
+}
+
+.subgrupo-vino {
+    text-align: center;
+    color: var(--color-ppal);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.boton-arriba {
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 7%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    color: var(--color-resalte);
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+}
+
+.boton-arriba.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.boton-arriba:hover {
+    transform: scale(1.3);
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .fondo-contenedor {
+        max-height: 200vh;
+    }
+
+    .logo-svg {
+        width: 85%;
+        padding-bottom: 30px;
+    }
+
+    .barraNav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        background: var(--degradado-doble);
+        text-align: center;
+    }
+
+    .barraNav a {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion-menu {
+        padding: 2rem 0.4rem;
+        max-width: 90%;
+        border-radius: 6px;
+        backdrop-filter: blur(5px);
+    }
+
+    .plato-nombre br {
+        display: inline;
+    }
+
+    html {
+        scroll-padding-top: 180px;
+    }
+
+    .plato {
+        gap: 0.5rem;
+    }
+}
+ 
+--- ARCHIVO: css\tipografias.css --- 
+/* tipografias.css 
+    - h1 para grandes títulos de sección y logotipo.
+    - h2 para eslóganes o subtítulos destacados.
+    - h3 títulos de bloque de contacto
+    - h4 para nombres de platos y 
+    - h5 para precios, descripciones cortas y detalles secundarios.
+    - p para texto fluido (descripciones largas).
+    - a y button para elementos interactivos con estilo propio.*/
+
+/* ---------- RESET ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- ESTILOS GLOBALES ---------- */
+body {
+    /* Sans-serif para el cuerpo, mejora la legibilidad */
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2 {
+    text-shadow: 2px 2px 1px var(--color-negro-5);
+}
+
+a {
+    text-shadow: 1px 1px 1px var(--color-negro-5);
+}
+
+/* Títulos principales: Serif, sin mayúsculas forzadas */
+h1 {
+    font-family: "Cardo", serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Cardo", serif;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px var(--color-resalte);
+}
+
+/* Sección contacto */
+h3 {
+    font-family: "Cardo", serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* Nombres de platos */
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+/* Precios y etiquetas: Sans-serif, mayúsculas, amplio espaciado */
+h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 70;
+}
+
+/* Descripciones largas: Sans-serif limpia */
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.95rem, 3vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.7; /* Mayor interlineado = más elegancia */
+}
+
+/* Elementos interactivos */
+a {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1.5 rem, 3.5vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    /*border: 1px solid #2c2c2c; /* Borde fino para botones premium */
+    background: transparent;
+    /*padding: 0.8em 2em; /* Espacio de respiración */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*button:hover {
+    background: #2c2c2c;
+    color: #fff;
+}*/
+ 
+--- ARCHIVO: js\eliicoptero.js --- 
+document.addEventListener("DOMContentLoaded", function () {
+    var el = document.getElementById("eliicoptero");
+    if (!el) return;
+
+    var margen = parseInt(el.dataset.empieza, 10) || 10;
+    var color = el.dataset.color || "currentColor";
+    var tamano = parseInt(el.dataset.tamano, 10) || 30;
+    var distanciaAbajo = el.dataset.distanciaAbajo || "1rem";
+    var distanciaDerecha = el.dataset.distanciaDerecha || "1rem";
+
+    el.innerHTML = `<svg viewBox="44.628 109.471 212.302 97.66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 102.002 167.948 C 106.8 167.948 121.032 164.699 125.649 162.6 C 130.788 160.264 143.947 150.008 131.28 146.553 C 127.795 145.602 123.856 145.99 120.3 145.99 C 117.259 145.99 110.232 146.703 107.351 147.679 C 100.724 149.924 95.658 152.914 91.718 155.504 C 91.383 155.724 91.056 155.933 90.74 156.125 C 82.271 161.274 70.331 170.081 80.324 178.647 C 91.396 188.138 107.682 187.476 121.145 184.559 C 147.694 178.806 175.498 170.609 197.438 154.154 C 206.734 147.182 216.159 140.201 225.309 133.04 C 226.49 132.115 238.373 122.624 239.666 122.624" />
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 50.764 155.28 C 66.061 152.499 107.213 144.605 122.553 142.049 C 133.704 140.19 145.474 139.586 156.335 136.418 C 162.656 134.575 169.246 134.113 175.479 132.195 C 176.287 131.947 178.211 131.997 178.857 131.351" />
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 55.55 132.758 C 64.075 132.758 73.039 136.017 81.45 137.263 C 98.11 139.731 114.83 142.346 131.561 144.019 C 140.75 144.938 155.065 149.003 164.256 150.328" />
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 231.784 122.342 C 238.544 120.652 245.624 123.186 252.335 123.186" />
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 234.599 118.119 C 236.8 118.669 244.171 124.272 244.171 127.128" />
+      <path fill="none" stroke="${color}" stroke-width="2" d="M 106.232 186.992 C 105.443 189.359 102.31 192.891 100.304 194.35 C 99.857 194.676 96.216 196.644 96.216 197.007 C 96.216 197.288 96.761 196.871 97.034 196.803 C 98.004 196.56 98.907 196.598 99.895 196.598 C 103.03 196.598 106.164 196.598 109.298 196.598 C 113.125 196.598 116.917 197.007 120.744 197.007 C 121.423 197.007 125.241 197.666 125.241 196.598" />
+    </svg>`;
+
+    el.style.cssText = "position:fixed; bottom:" + distanciaAbajo + "; right:" + distanciaDerecha + "; " + "width:" + tamano + "px; height:auto; z-index:10000; opacity:0;";
+
+    function comprobarScroll() {
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        var distancia = maxScroll - window.scrollY;
+        el.style.opacity = distancia <= margen && distancia > 2 ? "1" : "0";
+    }
+
+    window.addEventListener("scroll", comprobarScroll, { passive: true });
+    window.addEventListener("resize", comprobarScroll, { passive: true });
+    comprobarScroll();
+});
+ 
+--- ARCHIVO: js\index.js --- 
+document.addEventListener("DOMContentLoaded", () => {
+    // Animación de aparición para el bloque de info
+    const infoBloque = document.querySelector(".pantalla-abajo");
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                infoBloque.classList.add("visible");
+                observer.unobserve(entry.target); // Deja de observar una vez es visible
+            }
+        },
+        { threshold: 0.1 },
+    );
+    observer.observe(infoBloque);
+
+    // Scroll suave al hacer clic en la flecha
+    const flecha = document.querySelector(".boton-abajo");
+    flecha.addEventListener("click", () => {
+        infoBloque.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const badge = document.getElementById("rg26-b-gold");
+    if (window.scrollY > 50) {
+        badge.classList.add("mostrar");
+    } else {
+        badge.classList.remove("mostrar");
+    }
+});
+ 
+--- ARCHIVO: js\menu.js --- 
+document.addEventListener("DOMContentLoaded", () => {
+    // Lógica para el botón "Volver Arriba"
+    const botonArriba = document.querySelector(".boton-arriba");
+    if (botonArriba) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > window.innerHeight * 0.5) {
+                botonArriba.classList.add("visible");
+            } else {
+                botonArriba.classList.remove("visible");
+            }
+        });
+
+        botonArriba.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // Lógica para resaltar la sección activa en el menú (Scroll Spy)
+    const secciones = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".barraNav a");
+
+    const observerSecciones = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Remover clase activa de todos
+                    navLinks.forEach((link) => link.classList.remove("activo"));
+                    // Buscar el link correspondiente y activarlo
+                    const id = entry.target.getAttribute("id");
+                    const activeLink = document.querySelector(`.barraNav a[href="#${id}"]`);
+                    if (activeLink) activeLink.classList.add("activo");
+                }
+            });
+        },
+        { rootMargin: "-50% 0px -50% 0px" }, // Se activa cuando la sección cruza el centro de la pantalla
+    );
+
+    secciones.forEach((seccion) => observerSecciones.observe(seccion));
+});
